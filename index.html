@@ -1,49 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Techcart.com</title>
-    <script src="./assets/js/main.js"></script>
-    <link rel="stylesheet" href="./assets/css/output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
+    <script src="./assets/js/main.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="font-sans">
+    <!-- header start -->
     <header class="bg-[#0099CC]">
-        <div class="container mx-auto">
-            <div class="header flex justify-center items-center sm:pt-2 sm:pb-2 " >
-                <div class="header__logo basis-[25%]">
-                    <button class="md:hidden sm:block  text-left text-2xl pl-3">
-                        <i class=" fa-solid fa-bars text-white"></i>
-                    </button>
-                    <img src="./assets/images/logo-white3.png" class="object-contain w-[90%] md:block sm:hidden " alt="logo">
-                </div>
-                <div class="header__searchInp basis-[50%] text-center md:block sm:hidden">
-                    <i class="fa-solid fa-magnifying-glass absolute  translate-x-3 translate-y-4 text-gray-400"></i>
-                    <input type="text" name="" class="text-[14px] w-[60%] pt-3 pb-3 pl-8 rounded-[3px]" placeholder="Search for products..." id="searchInput">
-                </div>
-                <div class="responsivLogo basis-[50%] text-center md:hidden sm:block ">
-                    <img src="./assets/images/logo-white3.png" class="w-[70%]" alt="logo">
-                </div>
-                <div class="header__content text-[14px] gap-4 p-1 text-white font-semibold flex  justify-center items-center content-center text-center basis=[25%]">
-                    <div class="register">
-                        <button ><i class="fa-solid fa-user text-2xl "></i></button>
-                        <button class="signIn__Btn sm:hidden md:block ">Sign in|Register</button>
-                       
-                    </div>
-                    <div class="shopList">
-                        <button class="md:inline sm:hidden "><i class="fa-regular fa-rectangle-list  text-2xl"></i></button>
-                        <button class="shopList__Btn sm:hidden md:block">Shopping list</button>
-                        <button class="md:hidden sm:block"><i class="fa-solid fa-star text-2xl"></i></button>
-                    </div>
-                    <div class="addToCart">
-                        
-                        <button><i class="fa-solid fa-cart-plus  text-2xl"></i></button>
-                        <button class="addToCart__Btn sm:hidden md:block">CART/AUD <span>$0</span></button>
-                    </div>
-                </div>
+      <div class="container mx-auto">
+        <div class="header flex justify-center items-center sm:pt-2 sm:pb-2">
+          <div class="header__logo basis-[25%]">
+            <button class="md:hidden sm:block text-left text-2xl pl-3">
+              <i class="fa-solid fa-bars text-white"></i>
+            </button>
+            <img
+              src="./assets/images/logo-white3.png"
+              class="object-contain w-[90%] md:block sm:hidden"
+              alt="logo"
+            />
+          </div>
+          <div
+            class="header__searchInp basis-[50%] text-center md:block sm:hidden"
+          >
+            <i
+              class="fa-solid fa-magnifying-glass absolute translate-x-3 translate-y-4 text-gray-400"
+            ></i>
+            <input
+              type="text"
+              name=""
+              class="text-[14px] w-[60%] pt-3 pb-3 pl-8 rounded-[3px]"
+              placeholder="Search for products..."
+              id="searchInput"
+            />
+          </div>
+          <div class="responsivLogo basis-[50%] text-center md:hidden sm:block">
+            <img
+              src="./assets/images/logo-white3.png"
+              class="w-[70%]"
+              alt="logo"
+            />
+          </div>
+          <div
+            class="header__content text-[14px] gap-4 p-1 text-white font-semibold flex justify-center items-center content-center text-center basis=[25%]"
+          >
+            <div class="register">
+              <button><i class="fa-solid fa-user text-2xl"></i></button>
+              <button class="signIn__Btn sm:hidden md:block">
+                Sign in|Register
+              </button>
             </div>
+            <div class="shopList">
+              <button class="md:inline sm:hidden">
+                <i class="fa-regular fa-rectangle-list text-2xl"></i>
+              </button>
+              <button class="shopList__Btn sm:hidden md:block">
+                Shopping list
+              </button>
+              <button class="md:hidden sm:block">
+                <i class="fa-solid fa-star text-2xl"></i>
+              </button>
+            </div>
+            <div class="addToCart">
+              <button><i class="fa-solid fa-cart-plus text-2xl"></i></button>
+              <button class="addToCart__Btn sm:hidden md:block">
+                CART/AUD <span>$0</span>
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
     </header>
-</body>
+    <!-- header end -->
+
+    <!-- navbar start -->
+    <nav class="shadow-xl relative">
+      <div class="container mx-auto text-lg  iconColor font-semibold p-5 sm:hidden md:block">
+        <ul class="flex  justify-between listHover">
+          <li>
+            <a href="" class="text-[#0099CC] dropAnchor ">SHOP PRODUCTS<i style="color: #0099CC;" class="pl-1 fa-solid fa-chevron-down "></i></a>
+            <div class="dropDown-menu dropDownHover hidden flex flex-col absolute pt-3 pb-3 top-[68px] left-[260px] bg-[#F1F1F1]">
+             <a href=""><i class="fa-solid fa-laptop pr-1"></i>Notebooks</a>
+             <a href=""><i class="fa-solid fa-desktop pr-1"></i>Monitors</a>
+             <a href=""><i class="fa-solid fa-server pr-1"></i>Servers</a>
+             <a href=""><i class="fa-solid fa-server pr-1"></i>Computer equipmnts</a>
+             <a href=""><img src="./assets/images/3d-printing-software.svg" class="inline pr-1" width="20px" >Softwares</a>
+             <a href=""><i class="fa-solid fa-stopwatch pr-1"></i>Smart Watches</a>
+             <a href=""><i class="fa-solid fa-headphones-simple pr-1"></i>Speakars & Headphones</a>
+             <a href=""><i class="fa-solid fa-mobile-screen pr-1"></i>Mobil phones & accesoairs</a>
+             <a href=""><i class="fa-solid fa-stopwatch pr-1"></i>Smart Watches</a>
+             <a href=""><i class="fa-solid fa-tablet pr-1"></i>tablets</a>
+             <a href=""><i class="fa-solid fa-map pr-1"></i>Modems </a>
+             <a href=""><i class="fa-solid fa-phone pr-1"></i>It telephony</a>
+             <a href=""><i class="fa-solid fa-gamepad pr-1"></i>Gaming equipmnts</a>
+             <a href=""> <img src="./assets/images/drone.svg" width="23px" class="inline pr-1">Drones</a>
+             <a href=""><img src="./assets/images/point-of-sale.svg" width="20px" class="inline pr-1" alt="point">Point of sale</a>
+            </div>
+          </li>
+          <li class="hover:text-[#0099CC]"><a href="">CLEARANCE</a></li>
+          <li class="hover:text-[#0099CC]"><a href="">BRANDS </a></li>
+          <li class="hover:text-[#0099CC]"><a href=""> DELIVERY</a></li>
+          <li class="hover:text-[#0099CC]"><a href=""> FAQS</a></li>
+          <li class="hover:text-[#0099CC]"  ><a href="">HELP</a></li>
+        </ul>
+      </div>
+      <div class="responsivNavbar  sm:block md:hidden pb-3 pt-3 ">
+        <div class="header__searchInp  text-center ">
+        <i class="fa-solid fa-magnifying-glass absolute  translate-x-3 translate-y-4 text-gray-400"></i>
+        <input
+          type="text"
+          name=""
+          class="text-[14px] border-2 divide-inherit w-[70%] pt-3 pb-3 pl-8 rounded-[3px]"
+          placeholder="Search for products..."
+          id="searchInput"/>
+      </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+  </body>
 </html>
