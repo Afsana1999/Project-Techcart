@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techcart.com</title>
+    <script src="./assets/js/main.js"></script>
+    <link rel="stylesheet" href="./assets/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="bg-[#0099CC]">
+        <div class="container mx-auto">
+            <div class="header flex justify-center items-center sm:pt-2 sm:pb-2 " >
+                <div class="header__logo basis-[25%]">
+                    <button class="md:hidden sm:block  text-left text-2xl pl-3">
+                        <i class=" fa-solid fa-bars text-white"></i>
+                    </button>
+                    <img src="./assets/images/logo-white3.png" class="object-contain w-[90%] md:block sm:hidden " alt="logo">
+                </div>
+                <div class="header__searchInp basis-[50%] text-center md:block sm:hidden">
+                    <i class="fa-solid fa-magnifying-glass absolute  translate-x-3 translate-y-4 text-gray-400"></i>
+                    <input type="text" name="" class="text-[14px] w-[60%] pt-3 pb-3 pl-8 rounded-[3px]" placeholder="Search for products..." id="searchInput">
+                </div>
+                <div class="responsivLogo basis-[50%] text-center md:hidden sm:block ">
+                    <img src="./assets/images/logo-white3.png" class="w-[70%]" alt="logo">
+                </div>
+                <div class="header__content text-[14px] gap-4 p-1 text-white font-semibold flex  justify-center items-center content-center text-center basis=[25%]">
+                    <div class="register">
+                        <button ><i class="fa-solid fa-user text-2xl "></i></button>
+                        <button class="signIn__Btn sm:hidden md:block ">Sign in|Register</button>
+                       
+                    </div>
+                    <div class="shopList">
+                        <button class="md:inline sm:hidden "><i class="fa-regular fa-rectangle-list  text-2xl"></i></button>
+                        <button class="shopList__Btn sm:hidden md:block">Shopping list</button>
+                        <button class="md:hidden sm:block"><i class="fa-solid fa-star text-2xl"></i></button>
+                    </div>
+                    <div class="addToCart">
+                        
+                        <button><i class="fa-solid fa-cart-plus  text-2xl"></i></button>
+                        <button class="addToCart__Btn sm:hidden md:block">CART/AUD <span>$0</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
