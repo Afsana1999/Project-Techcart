@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>clearance Archives - Techcart</title>
+    <title>Delivery Information - Techcart</title>
     <script src="./assets/js/main.js" defer></script>
     <link rel="stylesheet" href="./assets/css/output.css" />
     <link
@@ -53,11 +53,12 @@
             <button class="md:hidden sm:block text-left text-2xl pl-3">
               <i class="fa-solid fa-bars text-white"></i>
             </button>
-            <img
-              src="./assets/images/logo-white3.png"
-              class="object-contain w-[90%] md:block sm:hidden"
-              alt="logo"
-            />
+            <a href="./index.html">
+              <img
+                src="./assets/images/logo-white3.png"
+                class="object-contain w-[90%] md:block sm:hidden"
+                alt="logo"
+            /></a>
           </div>
           <div
             class="header__searchInp basis-[50%] text-center md:block sm:hidden"
@@ -113,7 +114,7 @@
     <!-- header end -->
 
     <!-- navbar start -->
-    <nav class="shadow-xl  sticky top-0 z-10 bg-white">
+    <nav class="shadow-xl sticky top-0 z-10 bg-white">
       <div
         class="container mx-auto text-lg iconColor font-semibold p-5 sm:hidden md:block"
       >
@@ -178,9 +179,15 @@
               >
             </div>
           </li>
-          <li class="hover:text-[#0099CC]"><a href="./clearance.html ">CLEARANCE</a></li>
-          <li class="hover:text-[#0099CC]"><a href="./brands.html">BRANDS </a></li>
-          <li class="hover:text-[#0099CC]"><a href="./delivery.html"> DELIVERY</a></li>
+          <li class="hover:text-[#0099CC]">
+            <a href="./clearance.html ">CLEARANCE</a>
+          </li>
+          <li class="hover:text-[#0099CC]">
+            <a href="./brands.html">BRANDS </a>
+          </li>
+          <li class="hover:text-[#0099CC]">
+            <a href="./delivery.html"> DELIVERY</a>
+          </li>
           <li class="hover:text-[#0099CC]"><a href="./faqs.html"> FAQS</a></li>
           <li class="hover:text-[#0099CC]"><a href="./help.html">HELP</a></li>
         </ul>
@@ -203,133 +210,334 @@
     <!-- navbar end -->
 
     <!-- homeStore section start -->
-     <section id="homeStore">
-      <div class="container flex justify-between pt-6 pb-6 ">
+    <section id="homeStore" class="bg-[#0099CC] mb-8">
+      <div class="container flex justify-between pt-6 pb-6">
         <div class="homeStore-left text-lg font-semibold">
-          <a href="./index.html" class="text-gray-500 hover:text-black ">HOME</a>
-          <span>/</span>
-          <a href="" class="text-gray-500 hover:text-black ">STORE</a>
-          <span>/</span>
-          MONITORS & PROJECTORS
+          <h1 class="text-white font-extrabold text-3xl">
+            Delivery Information
+          </h1>
         </div>
-        <div class="homeStore-right">
-         <span> Showing 1–12 of 204 results</span>
-          <select name="" id="" class="border ml-5 p-3 text-gray-700 " >
-            <option value="">Sort by popularty</option>
-            <option value="" selected>Sort by latest</option>
-            <option value="">Sort by price: low to high</option>
-            <option value="">Sort by price: high to low</option>
-          </select>
+        <div class="homeStore-right text-white">
+          <a href="./index.html" class="text-white hover:text-black">HOME</a>
+          <span>/</span>
+          <a href="" class="text-white font-bold hover:text-black"
+            >Delivery Information</a
+          >
         </div>
       </div>
-     </section>
+    </section>
     <!-- homeStore section end -->
 
-    <!-- monitors section start -->
-     <section id="monitors" >
-      <div class="container flex ">
-        <div class="category-checkbox">
-        <h1 class="pb-3 font-bold text-lg">CATEGORIES</h1>
-        <button class="text-left pb-6">x Monitors & Projectors</button>
-        <h2 class="pb-10 font-bold text-lg">BRANDS</h2>
-        <h2 class="pb-3 font-bold text-lg">AVAILABILITY</h2>
-        <input type="checkbox" name="" id="">
-        <label for="">Out of Stock</label><br>
-        <input type="checkbox" name="" id="">
-        <label for="">In stock</label><br>
-        <input type="checkbox" name="" id="">
-        <label for="">All</label>
-        
+    <!-- delivery-information section start -->
+    <section id="delivery-information">
+      <div class="container">
+        <h1 class="text-3xl font-extrabold pt-10 pb-10 text-[#0099CC] font-">
+          Delivery and Shipping Information
+        </h1>
+        <div class="pb-6">
+          <h4 class="text-2xl font-bold pb-4">Shipping Information</h4>
+          <p class="text-lg">
+            Our goods are shipped from within Australia using the best possible
+            couriers for your location. We require physical address for your
+            shipping addresses. We do not deliver to P.O. Boxes. All our
+            deliveries are fully insured meaning peace of mind for your
+            orders.We use various courier services such as E-Parcel (Australia
+            Post), Australian Air Express, Couriers Please, Fastway and
+            Startrack Express. For efficient service, the courier company will
+            be chosen based on your location & the goods that you have ordered.
+            Priority shipping is also available for urgent orders at a small
+            extra cost. Oversized and additional parcels/boxes may incur a small
+            fee depending on the receiver’s location, but you will always be
+            notified in these cases prior to proceeding with your order. All
+            shipping charges can be previewed on the checkout page or on the
+            product details page prior to the order being placed.
+          </p>
         </div>
-        <div class="category-cards grid grid-cols-3 text-center pt-6">
-          <div class="card ">
-            <div class="card-img w-[200[px] h-[200px]">
-              <img src="./assets/images/monitor1PKDA80.jpg" class="object-contain w-full h-full">
-            </div>
-            <p class="pb-5 pt-6 text-gray-500 h-[100px]">
-              TP-Link PS110P Printer Server Single Parallel port 10/100 Mbps
-            </p>
-            <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
-            <button class="py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]">
-              ADD TO CART
-            </button>
-          </div>
-          <div class="card ">
-            <div class="card-img w-[200[px] h-[200px]">
-              <img src="./assets/images/monitor2PRB-1.jpg" class="object-contain w-full h-full">
-            </div>
-            <p class="pb-5 pt-6 text-gray-500 h-[100px]">
-              TP-Link PS110P Printer Server Single Parallel port 10/100 Mbps
-            </p>
-            <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
-            <button class="py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]">
-              ADD TO CART
-            </button>
-          </div>
-          <div class="card">
-            <div class="card-img w-[200[px] h-[200px]">
-              <img src="./assets/images/monitor3PRB-10.jpg" class="object-contain w-full h-full">
-            </div>
-            <p class="pb-5 pt-6 text-gray-500 h-[100px]">
-              TP-Link PS110P Printer Server Single Parallel port 10/100 Mbps
-            </p>
-            <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
-            <button class="py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]">
-              ADD TO CART
-            </button>
-          </div>
-          <div class="card ">
-            <div class="card-img w-[200[px] h-[200px]">
-              <img src="./assets/images/mon5PRB-11S.jpg" class="object-contain w-full h-full">
-            </div>
-            <p class="pb-5 pt-6 text-gray-500 h-[100px]">
-              TP-Link PS110P Printer Server Single Parallel port 10/100 Mbps
-            </p>
-            <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
-            <button class="py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]">
-              ADD TO CART
-            </button>
-          </div>
-          <div class="card">
-            <div class="card-img w-[200[px] h-[200px]">
-              <img src="./assets/images/m6PSAA135.jpg" class="object-contain w-full h-full">
-            </div>
-            <p class="pb-5 pt-6 text-gray-500 h-[100px]">
-              TP-Link PS110P Printer Server Single Parallel port 10/100 Mbps
-            </p>
-            <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
-            <button class="py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]">
-              ADD TO CART
-            </button>
-          </div>
-          <div class="card">
-            <div class="card-img w-[200[px] h-[200px]">
-              <img src="./assets/images/m6PSAA135.jpg" class="object-contain w-full h-full">
-            </div>
-            <p class="pb-5 pt-6 text-gray-500 h-[100px]">
-              TP-Link PS110P Printer Server Single Parallel port 10/100 Mbps
-            </p>
-            <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
-            <button class="py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]">
-              ADD TO CART
-            </button>
-          </div>
-          <div class="card">
-            <div class="card-img w-[200[px] h-[200px]">
-              <img src="./assets/images/m6PSAA135.jpg" class="object-contain w-full h-full">
-            </div>
-            <p class="pb-5 pt-6 text-gray-500 h-[100px]">
-              TP-Link PS110P Printer Server Single Parallel port 10/100 Mbps
-            </p>
-            <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
-            <button class="py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]">
-              ADD TO CART
-            </button>
-          </div>
+        <div class="pb-6">
+          <h4 class="text-2xl font-bold pb-4">
+            Combine Shipping with super competitive price
+          </h4>
+          <p class="text-lg">
+            We offer very competitive shipping price Australia Wide to save you
+            money. Our system allows you to combine multiple products into the
+            one shipment saving you total freight cost. We don’t charge you more
+            freight for ordering more items and have it shipped from multiple
+            location. The more items you have in your cart the cheaper the
+            shipping cost per item! The total charges are calculated based on
+            the volume weight of the product(s) ordered and your location.
+          </p>
+        </div>
+        <div class="pb-6">
+          <h4 class="text-2xl font-bold pb-4">What is the shipping cost?</h4>
+          <p class="text-lg">
+            You can check the estimated shipping cost in the Product Detail
+            section of the product. Simply select the “Calculate Freight” Tab
+            and enter your destination for the cost of shipping the product. You
+            can also get the total freight cost for the whole order at the
+            Checkout page prior to entering any payment information. We have a
+            wide selection of Couriers that we use, and the best shipping cost
+            is calculated for you automatically. We combine shipping cost which
+            means that the more you order the more you are saving on freight for
+            each individual item.
+          </p>
+        </div>
+        <div class="pb-6">
+          <h4 class="text-2xl font-bold pb-4">Shipping Information</h4>
+          <p class="text-lg">
+            Order tracking are normally available on the website within 24 hours
+            of dispatch. Please log in and visit My Order Status for the online
+            tracking information. If for some reason the tracking details are
+            not available online, you can contact support@techcart.com.au for
+            more information.
+          </p>
+        </div>
+        <div class="pb-6">
+          <h4 class="text-2xl font-bold pb-4">Tracking Your Orders</h4>
+          <p class="text-lg">
+            Our goods are shipped from within Australia using the best possible
+            couriers for your location. We require physical address for your
+            shipping addresses. We do not deliver to P.O. Boxes. All our
+            deliveries are fully insured meaning peace of mind for your
+            orders.We use various courier services such as E-Parcel (Australia
+            Post), Australian Air Express, Couriers Please, Fastway and
+            Startrack Express. For efficient service, the courier company will
+            be chosen based on your location & the goods that you have ordered.
+            Priority shipping is also available for urgent orders at a small
+            extra cost. Oversized and additional parcels/boxes may incur a small
+            fee depending on the receiver’s location, but you will always be
+            notified in these cases prior to proceeding with your order. All
+            shipping charges can be previewed on the checkout page or on the
+            product details page prior to the order being placed.
+          </p>
+        </div>
+        <div class="pb-6">
+          <h4 class="text-2xl font-bold pb-4">Delivery Options</h4>
+          <p class="text-lg">
+            Standard Delivery Service: Your goods will be shipped using normal
+            courier service. Delivery time varies between 2 to 5 working days
+            for most metro areas. WA, NT & regional areas may require additional
+            service time. In the rare instance when goods are lost, Insurance
+            cover is available but is subjected to carrier’s processing time.
+            The processing time varies depending on the courier and usually
+            takes around 14 days to process. Standard shipping orders are
+            dispatched once per day.
+          </p>
+        </div>
+        <div class="pb-6">
+          <h4 class="text-2xl font-bold pb-4">
+            Priority shipping & Insurance:
+          </h4>
+          <p class="text-lg">
+            Express shipping with immediate insurance cover when goods are
+            confirmed lost. The delivery time is around 1 to 3 days for most
+            metro areas. WA, NT & regional areas may require additional service
+            time. Priority shipping orders are dispatched up to 3 times daily
+            and in stock orders are dispatched either same day or next working
+            day.Our warehouse working days are Monday to Friday (excluding
+            public holidays) shipping to Australian addresses only. Please be
+            aware that orders placed prior to the listed cut-off times are still
+            subject to credit clearance and stock availability. When requested,
+            additional shipping information and tracking numbers can be provided
+            for all orders.If for some reason you do not receive your purchase
+            within the delivery timeframe, please email support@techcart.com.au
+            with your order number. We will follow up on your enquiry
+            immediately. Signature on delivery is required so it is important to
+            be at the nominated address to receive the goods. In the event that
+            you are not present, a notification card will be left at the address
+            so that you can arrange a re-delivery or collect from a local
+            depot.All items should be inspected upon delivery and any damaged
+            box should always be signed as damaged in transit. By signing for
+            the goods indicates that you have received the shipment in good
+            condition and no future insurance claim will be possible.
+          </p>
         </div>
       </div>
-     </section>
-     <!-- monitors section end -->
+    </section>
+    <!-- delivery-information section end  -->
+
+    <!-- whatHot section start -->
+    <section id="whatHot" class="bg-white mt-5">
+      <div class="container text-center">
+        <h1
+          class="text-2xl font-extrabold pt-6 pb-6 flex justify-center items-center text-white bg-[#0099CC]"
+        >
+          RECENT PRODUCTS
+        </h1>
+        <div class="card-wrapper flex flex-wrap mb-10 ml-5 mr-5">
+          <swiper-container
+            class="mySwiper"
+            pagination="true"
+            pagination-clickable="true"
+            navigation="true"
+            space-between="30"
+            loop="true"
+          >
+            <swiper-slide>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/what1PS110P.jpg"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500 h-[100px]">
+                  TP-Link PS110P Printer Server Single Parallel port 10/100 Mbps
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/what2JBL_FLIP6_RIGHT_BLACK_thmb.jpg"
+                    class="object-contain w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500 h-[100px]">
+                  JBL flip 6 speaker (midinight black)
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/what3AU.jpg"
+                    class="object-contain w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500 h-[100px]">
+                  5V / 2A AU Power Adapter for T29/T3x/T46/T48/T5x series
+                  IPPhones – AU Model
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/what4X5PRO.jpg"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500 h-[100px]">
+                  LEADER Intel PC Stick SC7, Intel Quad Core Z8350, 4GB, 64GB
+                  Storage.
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/33827-card4320EX-Speedlite-Flash.jpg"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500">
+                  Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
+                  Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/52174-Canon-8x20-IS-card5jpg.jpg"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500">
+                  Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
+                  Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/66351-Belkin-Soundform-Play-TWS-Earbuds-Black-card3jpeg.jpeg"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500">
+                  Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
+                  Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/52174-Canon-8x20-IS-card5jpg.jpg"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500">
+                  Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
+                  Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/IPG-card1jpg.jpg"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500">
+                  Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
+                  Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/IPG-card1jpg.jpg"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500">
+                  Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
+                  Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/IPG-card1jpg.jpg"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500">
+                  Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
+                  Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/IPG-card1jpg.jpg"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500">
+                  Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
+                  Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+            </swiper-slide>
+          </swiper-container>
+        </div>
+      </div>
+    </section>
+    <!-- whatHot section end -->
+
     <!-- followUs section start -->
     <section id="followUs">
       <div class="bg-[#0099CC] pt-12 pb-10 text-white">
@@ -647,6 +855,6 @@
       </div>
     </footer>
     <!-- footer end -->
-     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   </body>
 </html>
