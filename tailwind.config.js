@@ -17,6 +17,28 @@ module.exports = {
       md: "850px",
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.underline-after': {
+          position: 'relative',
+        },
+        '.underline-after::after': {
+          content: '""',
+          position: 'absolute',
+          bottom: '0',
+          left: '0',
+          width: '0',
+          height: '2px', // Alt xəttin qalınlığı
+          backgroundColor: 'blue', // Alt xəttin rəngi
+          transition: 'width 0.3s ease',
+        },
+        '.hover-underline-after:hover::after': {
+          width: '100%', // Hover zamanı alt xəttin genişliyi
+        },
+      }
+      addUtilities(newUtilities, ['responsive', 'hover'])
+    },
+  ],
 };
 

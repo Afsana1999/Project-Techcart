@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQs - Techcart</title>
+    <script src="./assets/js/main.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      swiper-container {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .card {
+        padding: 20px 10px;
+      }
+    </style>
+  </head>
+  <body class="font-sans">
+    <!-- header start -->
+    <header class="bg-[#0099CC]" id="top">
+      <div class="container mx-auto">
+        <div class="header flex justify-center items-center sm:pt-2 sm:pb-2">
+          <div class="header__logo basis-[25%]">
+            <button class="md:hidden sm:block text-left text-2xl pl-3">
+              <i class="fa-solid fa-bars text-white"></i>
+            </button>
+            <a href="./index.html">
+              <img
+                src="./assets/images/logo-white3.png"
+                class="object-contain w-[90%] md:block sm:hidden"
+                alt="logo"
+            /></a>
+          </div>
+          <div
+            class="header__searchInp basis-[50%] text-center md:block sm:hidden"
+          >
+            <i
+              class="fa-solid fa-magnifying-glass absolute translate-x-3 translate-y-4 text-gray-400"
+            ></i>
+            <input
+              type="text"
+              name=""
+              class="text-[14px] w-[60%] pt-3 pb-3 pl-8 rounded-[3px]"
+              placeholder="Search for products..."
+              id="searchInput"
+            />
+          </div>
+          <div class="responsivLogo basis-[50%] text-center md:hidden sm:block">
+            <img
+              src="./assets/images/logo-white3.png"
+              class="w-[70%]"
+              alt="logo"
+            />
+          </div>
+          <div
+            class="header__content text-[14px] gap-4 p-1 text-white font-semibold flex justify-center items-center content-center text-center basis=[25%]"
+          >
+            <div class="register">
+              <button><i class="fa-solid fa-user text-2xl"></i></button>
+              <button class="signIn__Btn sm:hidden md:block">
+                Sign in|Register
+              </button>
+            </div>
+            <div class="shopList">
+              <button class="md:inline sm:hidden">
+                <i class="fa-regular fa-rectangle-list text-2xl"></i>
+              </button>
+              <button class="shopList__Btn sm:hidden md:block">
+                Shopping list
+              </button>
+              <button class="md:hidden sm:block">
+                <i class="fa-solid fa-star text-2xl"></i>
+              </button>
+            </div>
+            <div class="addToCart">
+              <button><i class="fa-solid fa-cart-plus text-2xl"></i></button>
+              <button class="addToCart__Btn sm:hidden md:block">
+                CART/AUD <span>$0</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <!-- navbar start -->
+    <nav class="shadow-xl sticky top-0 z-10 bg-white">
+      <div
+        class="container mx-auto text-lg iconColor font-semibold p-5 sm:hidden md:block"
+      >
+        <ul class="flex justify-between listHover">
+          <li>
+            <a href="" class="text-[#0099CC] dropAnchor"
+              >SHOP PRODUCTS<i
+                style="color: #0099cc"
+                class="pl-1 fa-solid fa-chevron-down"
+              ></i
+            ></a>
+            <div
+              class="dropDown-menu dropDownHover hidden flex flex-col absolute pt-3 pb-3 top-[68px] left-[260px] bg-[#F1F1F1]"
+            >
+              <a href=""><i class="fa-solid fa-laptop pr-1"></i>Notebooks</a>
+              <a href=""><i class="fa-solid fa-desktop pr-1"></i>Monitors</a>
+              <a href=""><i class="fa-solid fa-server pr-1"></i>Servers</a>
+              <a href=""
+                ><i class="fa-solid fa-server pr-1"></i>Computer equipmnts</a
+              >
+              <a href=""
+                ><img
+                  src="./assets/images/3d-printing-software.svg"
+                  class="inline pr-1"
+                  width="20px"
+                />Softwares</a
+              >
+              <a href=""
+                ><i class="fa-solid fa-stopwatch pr-1"></i>Smart Watches</a
+              >
+              <a href=""
+                ><i class="fa-solid fa-headphones-simple pr-1"></i>Speakars &
+                Headphones</a
+              >
+              <a href=""
+                ><i class="fa-solid fa-mobile-screen pr-1"></i>Mobil phones &
+                accesoairs</a
+              >
+              <a href=""
+                ><i class="fa-solid fa-stopwatch pr-1"></i>Smart Watches</a
+              >
+              <a href=""><i class="fa-solid fa-tablet pr-1"></i>tablets</a>
+              <a href=""><i class="fa-solid fa-map pr-1"></i>Modems </a>
+              <a href=""><i class="fa-solid fa-phone pr-1"></i>It telephony</a>
+              <a href=""
+                ><i class="fa-solid fa-gamepad pr-1"></i>Gaming equipmnts</a
+              >
+              <a href="">
+                <img
+                  src="./assets/images/drone.svg"
+                  width="23px"
+                  class="inline pr-1"
+                />Drones</a
+              >
+              <a href=""
+                ><img
+                  src="./assets/images/point-of-sale.svg"
+                  width="20px"
+                  class="inline pr-1"
+                  alt="point"
+                />Point of sale</a
+              >
+            </div>
+          </li>
+          <li class="hover:text-[#0099CC]">
+            <a href="./clearance.html ">CLEARANCE</a>
+          </li>
+          <li class="hover:text-[#0099CC]">
+            <a href="./brands.html">BRANDS </a>
+          </li>
+          <li class="hover:text-[#0099CC]">
+            <a href="./delivery.html"> DELIVERY</a>
+          </li>
+          <li class="hover:text-[#0099CC] text-[#0099CC]"><a href="./faqs.html"> FAQS</a></li>
+          <li class="hover:text-[#0099CC]"><a href="./help.html">HELP</a></li>
+        </ul>
+      </div>
+      <div class="responsivNavbar sm:block md:hidden pb-3 pt-3">
+        <div class="header__searchInp text-center">
+          <i
+            class="fa-solid fa-magnifying-glass absolute translate-x-3 translate-y-4 text-gray-400"
+          ></i>
+          <input
+            type="text"
+            name=""
+            class="text-[14px] border-2 divide-inherit w-[70%] pt-3 pb-3 pl-8 rounded-[3px]"
+            placeholder="Search for products..."
+            id="searchInput"
+          />
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- homeStore section start -->
+    <section id="homeStore" class="bg-[#0099CC] mb-8">
+      <div class="container flex justify-between pt-6 pb-6">
+        <div class="homeStore-left text-lg font-semibold">
+          <h1 class="text-white font-extrabold text-3xl">
+           FAQs
+          </h1>
+        </div>
+        <div class="homeStore-right text-white">
+          <a href="./index.html" class="text-white hover:text-black">HOME</a>
+          <span>/</span>
+          <a href="" class="text-white font-bold hover:text-black"
+            >FAQs</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- homeStore section end -->
+
+    <!-- delivery-information section start -->
+    <section id="faqs-information">
+      <div class="container">
+        <h1 class="text-3xl font-extrabold pt-10 pb-6 text-[#0099CC] font-">
+            Frequently Asked Questions
+        </h1>
+        <div class="pb-6 ">
+            <h4 class="text-2xl font-bold pb-4">Why do I need to create an account?</h4>
+        <p class="text-lg">           
+            Creating an account with Tech Cart enables you to place an order as well as view information regarding your order such as delivery tracking and order status. Other features include updates to your personal account, history, your wishlist selection and more. The information collected are used for processing your orders only and will not be used in any other way not authorised by you. We treat all information as strictly confidential and will never be released to any other third party.    
+        </p>
+        </div>
+        <div class="pb-6 ">
+            <h4 class="text-2xl font-bold pb-4"> How do I register as a new user?</h4>
+        <p class="text-lg">
+            It’s completely free to register an account with us. Just click on ‘Register’ on the top left hand corner of this page and simply fill out the Online Member Application form before clicking ‘Submit’. You’ll then be able to start shopping with us right away! After you have registered you will also receive an activation request email. Please follow the instruction on the email to activate your account.
+        </p>
+        </div>
+        <div class="pb-6 ">
+            <h4 class="text-2xl font-bold pb-4"> I have registered but did not receive an Activation Email</h4>
+        <p class="text-lg">
+            Due to certain Spam filter setting by some ISP or Anti-Virus software, you may not receive our system emails. If you do not receive an account activation email after 5 minutes of registration, please visit this activation page or email our sales team for manual activation.
+        </p>
+        </div>
+        <div class="pb-6 ">
+            <h4 class="text-2xl font-bold pb-4">I have forgotten my password.</h4>
+        <p class="text-lg">
+            If you need help retrieving your password, simply click here. A password reminder will be emailed to you at the address you registered with. If you have any other accounts related questions, please don’t hesitate to contact our customer service team support@techcart.com.au .
+        </p>
+        </div>
+        <div class="pb-6 ">
+            <h4 class="text-2xl font-bold pb-4">How do I place an order?</h4>
+        <p class="text-lg">
+            Simply select any item you’d like to purchase and then proceed to click on the relevant ‘Add to cart’ button. You will then be redirected to your shopping cart where you can checkout by following the prompts or continue shopping. An order confirmation will be sent via email upon completion of placing an order.
+        </p>
+        </div>
+        <div class="pb-6 ">
+            <h4 class="text-2xl font-bold pb-4">Combine Shipping with super competitive price</h4>
+        <p class="text-lg">
+            We offer very competitive shipping price Australia Wide to save you money.  Our system allows you to combine multiple products into the one shipment saving you total freight cost.   We don’t charge you more freight for ordering more items and have it shipped from multiple location.   The more items you have in your cart the cheaper the shipping cost per item!    The total charges are calculated based on the volume weight of the product(s) ordered and your location.
+        </p>
+        </div>
+        <div class="pb-6 ">
+            <h4 class="text-2xl font-bold pb-4">What is the shipping cost?</h4>
+        <p class="text-lg">
+            You can check the estimated shipping cost in the Product Detail section of the product.   Simply select the “Calculate Freight” Tab and enter your destination for the cost of shipping the product.   You can also get the total freight cost for the whole order at the Checkout page prior to entering any payment information.  We have a wide selection of Couriers that we use, and the best shipping cost is calculated for you automatically.  We combine shipping cost which means that the more you order the more you are saving on freight for each individual item.
+        </p>
+        </div>
+        <div class="pb-6 ">
+            <h4 class="text-2xl font-bold pb-4">Shipping Information</h4>
+        <p class="text-lg">
+            Order tracking are normally available on the website within 24 hours of dispatch.   Please log in and visit My Order Status for the online tracking information.    If for some reason the tracking details are not available online, you can contact support@techcart.com.au for more information.
+        </p>
+        </div>
+        <div class="pb-6 ">
+            <h4 class="text-2xl font-bold pb-4">Tracking Your Orders</h4>
+        <p class="text-lg">
+            Our goods are shipped from within Australia using the best possible couriers for your location. We require physical address for your shipping addresses. We do not deliver to P.O. Boxes. All our deliveries are fully insured meaning peace of mind for your orders.We use various courier services such as E-Parcel (Australia Post), Australian Air Express, Couriers Please, Fastway and Startrack Express.  For efficient service, the courier company will be chosen based on your location & the goods that you have ordered.  Priority shipping is also available for urgent orders at a small extra cost.  Oversized and additional parcels/boxes may incur a small fee depending on the receiver’s location, but you will always be notified in these cases prior to proceeding with your order.   All shipping charges can be previewed on the checkout page or on the product details page prior to the order being placed.
+        </p>
+        </div>
+        <div class="pb-6 ">
+            <h4 class="text-2xl font-bold pb-4">Delivery Options</h4>
+        <p class="text-lg">
+            Standard Delivery Service: Your goods will be shipped using normal courier service. Delivery time varies between 2 to 5 working days for most metro areas. WA, NT & regional areas may require additional service time. In the rare instance when goods are lost, Insurance cover is available but is subjected to carrier’s processing time.   The processing time varies depending on the courier and usually takes around 14 days to process. Standard shipping orders are dispatched once per day.
+        </p>
+        </div>
+      </div>
+    </section>
+    <!-- delivery-information section end  -->
+
+    <!-- whatHot section start -->
+    <section id="whatHot" class="bg-white mt-5">
+      <div class="container text-center">
+        <h1
+          class="text-2xl font-extrabold pt-6 pb-6 flex justify-center items-center text-white bg-[#0099CC]"
+        >
+          RECENT PRODUCTS
+        </h1>
+        <div class="card-wrapper flex flex-wrap mb-10 ml-5 mr-5">
+          <swiper-container
+            class="mySwiper"
+            pagination="true"
+            pagination-clickable="true"
+            navigation="true"
+            space-between="30"
+            loop="true"
+          >
+            <swiper-slide>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/what1PS110P.jpg"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500 h-[100px]">
+                  TP-Link PS110P Printer Server Single Parallel port 10/100 Mbps
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/what2JBL_FLIP6_RIGHT_BLACK_thmb.jpg"
+                    class="object-contain w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500 h-[100px]">
+                  JBL flip 6 speaker (midinight black)
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/what3AU.jpg"
+                    class="object-contain w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500 h-[100px]">
+                  5V / 2A AU Power Adapter for T29/T3x/T46/T48/T5x series
+                  IPPhones – AU Model
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/what4X5PRO.jpg"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500 h-[100px]">
+                  LEADER Intel PC Stick SC7, Intel Quad Core Z8350, 4GB, 64GB
+                  Storage.
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/33827-card4320EX-Speedlite-Flash.jpg"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500">
+                  Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
+                  Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/52174-Canon-8x20-IS-card5jpg.jpg"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500">
+                  Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
+                  Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/66351-Belkin-Soundform-Play-TWS-Earbuds-Black-card3jpeg.jpeg"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500">
+                  Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
+                  Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/52174-Canon-8x20-IS-card5jpg.jpg"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500">
+                  Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
+                  Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/IPG-card1jpg.jpg"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500">
+                  Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
+                  Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/IPG-card1jpg.jpg"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500">
+                  Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
+                  Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/IPG-card1jpg.jpg"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500">
+                  Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
+                  Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+              <div class="card w-[25%]">
+                <div class="card-img w-[200[px] h-[200px]">
+                  <img
+                    src="./assets/images/IPG-card1jpg.jpg"
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <p class="pb-5 pt-6 text-gray-500">
+                  Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
+                  Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
+                </p>
+                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+              </div>
+            </swiper-slide>
+          </swiper-container>
+        </div>
+      </div>
+    </section>
+    <!-- whatHot section end -->
+
+    <!-- followUs section start -->
+    <section id="followUs">
+      <div class="bg-[#0099CC] pt-12 pb-10 text-white">
+        <div class="container md:flex justify-center relative text-center">
+          <div class="followUs-left md:w-[50%] sm:w-[100%] pr-20">
+            <div class="followUs-title">
+              <h2 class="font-extrabold text-4xl pt-3 pb-5">
+                Find Us. Follow Us. Like Us.
+              </h2>
+              <p class="p-5">
+                Keep up with our latest offers and DIY inspiration. Join in the
+                community, tag your posts with #mightyhelpful.
+              </p>
+            </div>
+            <div class="followUs-icon text-3xl">
+              <i class="fa-brands fa-facebook-f pr-2"></i>
+              <i class="fa-brands fa-instagram pr-2"></i>
+              <i class="fa-brands fa-linkedin pr-2"></i>
+            </div>
+          </div>
+          <div
+            class="absolute flex md:justify-center md:-translate-y-16 md:right-auto md:top-auto sm:top-24 sm:right-0"
+          >
+            <img
+              src="./assets/images/pngaaa.com-4065354.png"
+              width="60.2%"
+              alt=""
+            />
+          </div>
+          <div
+            class="followUs-right pl-6 sm:pt-5 md:pt-0 sm:text-left md:text-center sm:w-[100%] md:w-[50%]"
+          >
+            <h2 class="font-extrabold text-4xl pt-3 pb-5">
+              Sign up to our Newsletter
+            </h2>
+            <div
+              class="flex flex-col md:justify-center sm:justify-start md:items-center"
+            >
+              <input type="text" class="w-[65%] h-[50px]" />
+              <button
+                class="w-[65%] h-[50px] bg-black mt-2 font-semibold text-[14px]"
+              >
+                SIGN ME UP
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-[#41BBEB] text-white pt-6 pb-6">
+        <div class="container flex justify-center items-center">
+          <div class="customerCcare w-[25%] pr-3">
+            <h2 class="text-2xl font-bold">24/7 Customer Care</h2>
+            <p class="text-[11px]">
+              Get expert advice anytime for anything you need
+            </p>
+          </div>
+          <div class="fastQuote w-[25%] flex">
+            <svg
+              id="Capa_1"
+              class="w-auto"
+              fill="white"
+              enable-background="new 0 0 512 512"
+              height="60px"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <path
+                  d="m95.867 155.124c3.425 0 6.657-1.75 8.513-4.708 7.881-12.561 11.469-24.583 10.968-36.754-.463-11.262-9.697-20.083-21.023-20.083h-10.61c-11.602 0-21.041 9.439-21.041 21.041v.567c0 11.214 9.064 20.352 20.25 20.472l3.196 11.982c1.188 4.453 5.218 7.483 9.747 7.483zm-18.193-39.937v-.567c0-3.331 2.71-6.041 6.041-6.041h10.61c3.253 0 5.904 2.503 6.036 5.7.23 5.602-.772 11.269-3.047 17.127-1.773-6.336-7.573-10.746-14.167-10.746-3.018 0-5.473-2.455-5.473-5.473z"
+                ></path>
+                <path
+                  d="m154.437 93.579h-10.61c-11.602 0-21.041 9.439-21.041 21.041v.567c0 11.214 9.064 20.352 20.25 20.472l3.196 11.982c1.187 4.452 5.217 7.482 9.746 7.482 3.425 0 6.657-1.75 8.513-4.708 7.881-12.561 11.469-24.583 10.968-36.754-.462-11.261-9.697-20.082-21.022-20.082zm2.988 37.827c-1.773-6.336-7.572-10.746-14.167-10.746-3.018 0-5.473-2.455-5.473-5.473v-.567c0-3.331 2.71-6.041 6.041-6.041h10.61c3.253 0 5.904 2.503 6.036 5.7.231 5.602-.772 11.269-3.047 17.127z"
+                ></path>
+                <path
+                  d="m368.146 269.551h-10.61c-11.603 0-21.041 9.438-21.041 21.041v.567c0 11.214 9.063 20.352 20.251 20.472l3.195 11.982c1.185 4.444 5.209 7.482 9.747 7.482 3.426 0 6.658-1.75 8.514-4.707 7.881-12.563 11.468-24.585 10.968-36.755-.464-11.261-9.699-20.082-21.024-20.082zm2.988 37.828c-1.772-6.338-7.572-10.747-14.166-10.747-3.019 0-5.474-2.455-5.474-5.473v-.567c0-3.331 2.71-6.041 6.041-6.041h10.61c3.253 0 5.904 2.504 6.035 5.7.233 5.602-.77 11.27-3.046 17.128z"
+                ></path>
+                <path
+                  d="m416.857 311.631 3.195 11.982c1.185 4.444 5.209 7.482 9.747 7.482 3.426 0 6.658-1.75 8.514-4.707 7.881-12.563 11.468-24.585 10.968-36.755-.464-11.262-9.698-20.083-21.023-20.083h-10.61c-11.603 0-21.041 9.438-21.041 21.041v.567c-.001 11.215 9.062 20.353 20.25 20.473zm-5.251-21.039c0-3.331 2.71-6.041 6.041-6.041h10.61c3.253 0 5.904 2.504 6.035 5.7.231 5.602-.771 11.27-3.047 17.128-1.772-6.338-7.572-10.747-14.166-10.747-3.019 0-5.474-2.455-5.474-5.473v-.567z"
+                ></path>
+                <path
+                  d="m412.384 146.709c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5h-214.32c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5z"
+                ></path>
+                <path
+                  d="m85.866 175.505c0 4.142 3.358 7.5 7.5 7.5h319.019c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5h-319.019c-4.142 0-7.5 3.358-7.5 7.5z"
+                ></path>
+                <path
+                  d="m93.366 219.3h319.019c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5h-319.019c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5z"
+                ></path>
+                <path
+                  d="m419.884 248.096c0-4.142-3.357-7.5-7.5-7.5h-319.018c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h319.019c4.142 0 7.499-3.358 7.499-7.5z"
+                ></path>
+                <path
+                  d="m93.366 276.892c-4.142 0-7.5 3.357-7.5 7.5s3.358 7.5 7.5 7.5h216.047c4.143 0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5z"
+                ></path>
+                <path
+                  d="m377.636 49.338h-199.791c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h199.792c65.817 0 119.363 53.547 119.363 119.364v57.271c0 32.441-12.793 62.786-36.022 85.444-18.376 17.925-32.445 38.462-41.816 61.04l-22.334 53.813-17.371-41.855c-2.795-6.733-6.7-12.889-11.608-18.295-2.785-3.066-7.528-3.294-10.595-.511-3.066 2.784-3.295 7.527-.511 10.594 3.747 4.127 6.728 8.824 8.86 13.962l21.039 50.694c1.714 4.132 5.713 6.801 10.186 6.801s8.472-2.669 10.186-6.801l26.002-62.652c8.589-20.693 21.521-39.552 38.438-56.052 26.145-25.505 40.546-59.663 40.546-96.181v-57.271c0-74.089-60.276-134.365-134.364-134.365z"
+                ></path>
+                <path
+                  d="m338.144 362.728c-5.616-1.586-11.409-2.391-17.218-2.391h-186.562c-65.818 0-119.364-53.546-119.364-119.363v-57.271c0-65.817 53.546-119.364 119.364-119.364h13.494c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5h-13.494c-74.089-.001-134.364 60.275-134.364 134.363v57.271c0 74.088 60.275 134.363 134.364 134.363h186.563c4.43 0 8.851.614 13.14 1.826 3.975 1.122 8.127-1.182 9.257-5.179 1.125-3.985-1.194-8.129-5.18-9.255z"
+                ></path>
+              </g>
+            </svg>
+            <p class="pl-2">
+              <strong>Fast</strong><br />
+              <strong>Quete</strong>
+            </p>
+          </div>
+          <div class="submitEnquiry w-[25%] flex">
+            <svg
+              version="1.1"
+              class="w-auto"
+              fill="white"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 511.999 511.999"
+              height="60px"
+              style="enable-background: new 0 0 511.999 511.999"
+              xml:space="preserve"
+            >
+              <g>
+                <g>
+                  <path
+                    d="M363.788,53.894c-34.176,0-61.979,27.803-61.979,61.979c0,4.465,3.618,8.084,8.084,8.084c4.466,0,8.084-3.62,8.084-8.084
+                    c0-25.26,20.55-45.81,45.81-45.81c25.26,0,45.81,20.55,45.81,45.81c0,25.26-20.55,45.81-45.81,45.81
+                    c-4.466,0-8.084,3.62-8.084,8.084v35.929c0,4.465,3.618,8.084,8.084,8.084s8.084-3.62,8.084-8.084v-28.37
+                    c30.371-3.973,53.895-30.018,53.895-61.454C425.767,81.698,397.964,53.894,363.788,53.894z"
+                  ></path>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <circle cx="363.788" cy="245.22" r="10.779"></circle>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <circle cx="105.094" cy="309.894" r="21.558"></circle>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <circle cx="169.767" cy="309.894" r="21.558"></circle>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <path
+                    d="M465.349,46.485C435.542,16.721,395.934,0.213,353.82,0.002c-42.211-0.179-82.251,16.335-112.657,46.591
+                    c-11.93,11.872-21.748,25.238-29.284,39.643c-0.013,0-0.026-0.002-0.039-0.002h-0.041c-56.389,0.282-109.424,22.386-149.336,62.24
+                    c-39.907,39.85-62.09,92.843-62.458,149.22c-0.371,56.728,21.569,110.26,61.777,150.731
+                    c40.727,40.997,94.991,63.574,152.796,63.574h179.976c5.319,0,10.002-3.203,11.93-8.161c1.927-4.954,0.642-10.476-3.276-14.068
+                    c-5.869-5.382-14.812-13.826-24.088-23.494c-8.598-8.964-9.183-22.94-1.358-32.508c30.764-37.62,47.784-85.081,47.995-133.738
+                    c14.625-7.595,28.146-17.492,40.101-29.525c30.029-30.226,46.415-70.209,46.138-112.579
+                    C511.72,115.824,495.153,76.246,465.349,46.485z M454.388,259.111c-27.356,27.535-63.802,42.699-102.627,42.699H230.759
+                    c3.076-2.981,6.453-6.344,9.893-9.93c11.246-11.723,11.993-30.02,1.738-42.561c-16.858-20.615-27.562-45.638-30.994-71.906
+                    c-0.524-4.01-3.958-6.997-8.002-6.997c-4.871,0-8.658,4.28-8.025,9.11c3.824,29.234,15.74,57.083,34.505,80.028
+                    c5.084,6.218,4.702,15.304-0.889,21.133c-6.655,6.937-13.082,13.02-17.389,16.974c-3.574,3.282-4.982,8.438-3.219,12.958
+                    c1.745,4.47,5.97,7.359,10.769,7.359H351.76c20.039,0,39.507-3.64,57.661-10.597c-1.794,42.346-17.318,83.309-44.175,116.153
+                    c-12.995,15.89-12.047,39.077,2.206,53.936c6.67,6.953,13.165,13.285,18.536,18.361H214.577
+                    c-53.466,0-103.656-20.883-141.326-58.8c-37.151-37.394-57.422-86.84-57.079-139.23c0.686-104.726,84.483-190.778,188.299-195.205
+                    c-4.389,11.399-7.435,23.299-9.062,35.507c-0.642,4.826,3.154,9.104,8.023,9.104h0.009c4.032,0,7.465-2.97,7.998-6.966
+                    c4.115-30.857,18.354-59.527,41.127-82.186c27.163-27.028,62.813-41.886,100.457-41.886c0.238,0,0.476,0.001,0.716,0.002
+                    c77.838,0.389,141.578,64.028,142.087,141.862C496.077,196.065,481.36,231.962,454.388,259.111z"
+                  ></path>
+                </g>
+              </g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+            </svg>
+            <p class="pl-2">
+              <strong> Submit </strong><br />
+              <strong>Enquiry</strong>
+            </p>
+          </div>
+          <div class="emailUs w-[25%] flex">
+            <svg
+              version="1.1"
+              id="Capa_1"
+              fill="white"
+              height="60px"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 511.974 511.974"
+              style="enable-background: new 0 0 511.974 511.974"
+              xml:space="preserve"
+            >
+              <g>
+                <g>
+                  <g>
+                    <path
+                      d="M511.872,195.725c-0.053-0.588-0.17-1.169-0.35-1.732c-0.117-0.503-0.28-0.994-0.486-1.468
+                      c-0.239-0.463-0.525-0.901-0.853-1.306c-0.329-0.481-0.71-0.924-1.135-1.323c-0.137-0.119-0.196-0.282-0.341-0.401
+                      l-82.065-63.735V59.704c0-14.138-11.462-25.6-25.6-25.6h-92.476L271.539,5.355c-9.147-7.134-21.974-7.134-31.121,0
+                      l-37.035,28.749h-92.476c-14.138,0-25.6,11.461-25.6,25.6v66.057L3.268,189.496c-0.145,0.12-0.205,0.282-0.341,0.401
+                      c-0.425,0.398-0.806,0.842-1.135,1.323c-0.328,0.405-0.614,0.842-0.853,1.306c-0.207,0.473-0.369,0.965-0.486,1.468
+                      c-0.178,0.555-0.295,1.127-0.35,1.707c0,0.179-0.102,0.333-0.102,0.512V486.37c0.012,5.428,1.768,10.708,5.009,15.061
+                      c0.051,0.077,0.06,0.171,0.119,0.239c0.06,0.068,0.188,0.145,0.273,0.239c4.794,6.308,12.25,10.027,20.173,10.061h460.8
+                      c7.954-0.024,15.441-3.761,20.241-10.103c0.068-0.085,0.171-0.111,0.23-0.196c0.06-0.085,0.068-0.162,0.12-0.239
+                      c3.241-4.354,4.997-9.634,5.009-15.061V196.237C511.974,196.058,511.881,195.904,511.872,195.725z M250.854,18.82
+                      c2.98-2.368,7.2-2.368,10.18,0l19.686,15.283h-49.493L250.854,18.82z M27.725,494.904l223.13-173.321
+                      c2.982-2.364,7.199-2.364,10.18,0l223.189,173.321H27.725z M494.908,481.6L271.539,308.117c-9.149-7.128-21.972-7.128-31.121,0
+                      L17.041,481.6V209.233L156.877,317.82c3.726,2.889,9.088,2.211,11.977-1.515c2.889-3.726,2.211-9.088-1.515-11.977
+                      L25.276,194.018l60.032-46.652v65.937c0,4.713,3.821,8.533,8.533,8.533c4.713,0,8.533-3.821,8.533-8.533v-153.6
+                      c0-4.713,3.82-8.533,8.533-8.533h290.133c4.713,0,8.533,3.82,8.533,8.533v153.6c0,4.713,3.82,8.533,8.533,8.533
+                      s8.533-3.821,8.533-8.533v-65.937l60.032,46.652l-142.31,110.507c-2.448,1.855-3.711,4.883-3.305,7.928s2.417,5.637,5.266,6.786
+                      c2.849,1.149,6.096,0.679,8.501-1.232l140.083-108.774V481.6z"
+                    ></path>
+                    <path
+                      d="M358.374,204.77v-34.133c0-56.554-45.846-102.4-102.4-102.4c-56.554,0-102.4,45.846-102.4,102.4
+                      s45.846,102.4,102.4,102.4c4.713,0,8.533-3.82,8.533-8.533s-3.82-8.533-8.533-8.533c-47.128,0-85.333-38.205-85.333-85.333
+                      s38.205-85.333,85.333-85.333s85.333,38.205,85.333,85.333v34.133c0,9.426-7.641,17.067-17.067,17.067
+                      s-17.067-7.641-17.067-17.067v-34.133c0-4.713-3.82-8.533-8.533-8.533s-8.533,3.82-8.533,8.533
+                      c0,18.851-15.282,34.133-34.133,34.133c-18.851,0-34.133-15.282-34.133-34.133s15.282-34.133,34.133-34.133
+                      c4.713,0,8.533-3.82,8.533-8.533s-3.82-8.533-8.533-8.533c-22.915-0.051-43.074,15.13-49.354,37.168
+                      c-6.28,22.038,2.847,45.565,22.347,57.601c19.5,12.036,44.622,9.65,61.507-5.843c1.858,18.046,17.543,31.464,35.659,30.505
+                      C344.25,237.91,358.431,222.912,358.374,204.77z"
+                    ></path>
+                  </g>
+                </g>
+              </g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+            </svg>
+            <p class="pl-2">
+              <strong>Email</strong><br />
+              <strong>Us</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- followUs section end -->
+
+    <!-- footer start -->
+    <footer>
+      <div class="footer-wrapper text-white bg-black pb-10">
+        <div class="container">
+          <div
+            class="footer-content flex justify-between footer-title pb-12 pt-3"
+          >
+            <div class="footer-information">
+              <h1>INFORMATION</h1>
+              <div><a href="">FAQs</a></div>
+              <div><a href="">About us</a></div>
+              <div><a href="">Brands</a></div>
+              <div><a href="">Direct imports</a></div>
+              <div><a href="">Delivery Information</a></div>
+            </div>
+            <div class="footer-support">
+              <h1>SUPPORT</h1>
+              <div><a href="">Help</a></div>
+              <div><a href=""> Contact Us</a></div>
+              <div><a href=""> Become a Reseller</a></div>
+              <div><a href=""> Return Authority Form</a></div>
+              <div><a href=""> Manufacturer Service Centers</a></div>
+            </div>
+            <div class="footer-legal">
+              <h1>LEGAL</h1>
+              <div><a href="">Spam policiy</a></div>
+              <div><a href="">Provacy policy</a></div>
+              <div><a href="">Terms & Conditions</a></div>
+              <div><a href="">Warranty & Returns</a></div>
+            </div>
+          </div>
+          <div
+            class="footer-copyright flex justify-between pt-10 border-t border-t-slate-600 text-[14px]"
+          >
+            <div class="copyright-left">
+              Copyright © 2024TechCart.com Pty Ltd. All Rights Reserved.
+            </div>
+            <div class="copyright-right text-3xl text-gray-500">
+              <i class="fa-brands fa-cc-visa pr-3"></i>
+              <i class="fa-brands fa-cc-discover pr-3"></i>
+              <i class="fa-brands fa-cc-mastercard pr-3"></i>
+              <i class="fa-brands fa-cc-paypal pr-3"></i>
+            </div>
+          </div>
+        </div>
+        <div class="text-end pr-7 text-[12px]">
+          <a href="#top">
+            <i class="fa-solid fa-chevron-up"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  </body>
+</html>
