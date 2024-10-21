@@ -45,6 +45,7 @@
     </style>
   </head>
   <body class="font-sans">
+
     <!-- header start -->
     <header class="bg-[#0099CC]" id="top">
       <div class="container mx-auto">
@@ -53,14 +54,15 @@
             <button class="md:hidden sm:block text-left text-2xl pl-3">
               <i class="fa-solid fa-bars text-white"></i>
             </button>
-           <a href="./index.html"> <img
-            src="./assets/images/logo-white3.png"
-            class="object-contain w-[90%] md:block sm:hidden"
-            alt="logo"
-          /></a>
+            <a href="./index.html">
+              <img
+                src="./assets/images/logo-white3.png"
+                class="object-contain w-[90%] md:block sm:hidden"
+                alt="logo"
+            /></a>
           </div>
           <div
-            class="header__searchInp basis-[50%] text-center md:block sm:hidden"
+            class="navbar relative header__searchInp basis-[50%] text-center md:block sm:hidden"
           >
             <i
               class="fa-solid fa-magnifying-glass absolute translate-x-3 translate-y-4 text-gray-400"
@@ -72,6 +74,10 @@
               placeholder="Search for products..."
               id="searchInput"
             />
+            <div
+              id="searchProducts"
+              class="absolute left-[128px] py-5 z-20 px-2 block w-[60%] text-center text-sm"
+            ></div>
           </div>
           <div class="responsivLogo basis-[50%] text-center md:hidden sm:block">
             <img
@@ -112,8 +118,12 @@
     </header>
     <!-- header end -->
 
+    <!-- basket section start -->
+     <section></section>
+    <!-- basket section end -->
+     
     <!-- navbar start -->
-    <nav class="shadow-xl  sticky top-0 z-10 bg-white">
+    <nav class="shadow-xl sticky top-0 z-10 bg-white">
       <div
         class="container mx-auto text-lg iconColor font-semibold p-5 sm:hidden md:block"
       >
@@ -178,9 +188,15 @@
               >
             </div>
           </li>
-          <li class="hover:text-[#0099CC]"><a href="./clearance.html ">CLEARANCE</a></li>
-          <li class="hover:text-[#0099CC]"><a href="./brands.html">BRANDS </a></li>
-          <li class="hover:text-[#0099CC]"><a href="./delivery.html"> DELIVERY</a></li>
+          <li class="hover:text-[#0099CC]">
+            <a href="./clearance.html ">CLEARANCE</a>
+          </li>
+          <li class="hover:text-[#0099CC]">
+            <a href="./brands.html">BRANDS </a>
+          </li>
+          <li class="hover:text-[#0099CC]">
+            <a href="./delivery.html"> DELIVERY</a>
+          </li>
           <li class="hover:text-[#0099CC]"><a href="./faqs.html"> FAQS</a></li>
           <li class="hover:text-[#0099CC]"><a href="./help.html">HELP</a></li>
         </ul>
@@ -215,8 +231,10 @@
         autoplay-disable-on-interaction="false"
       >
         <swiper-slide
-          ><a href="./clearance.html"><img src="./assets/images/Mobile-Phones.jpg" alt="mobile" /></a>
-            </swiper-slide>
+          ><a href="./clearance.html"
+            ><img src="./assets/images/Mobile-Phones.jpg" alt="mobile"
+          /></a>
+        </swiper-slide>
         <swiper-slide
           ><a href="./clearance.html">
             <img src="./assets/images/CCTV-Camera.jpg" alt="camera" /></a
@@ -227,17 +245,13 @@
         ></swiper-slide>
         <swiper-slide
           ><a href="./clearance.html">
-            <img
-              src="./assets/images/Smart-Watches.jpg"
-              alt="smart watch"
-            /></a
+            <img src="./assets/images/Smart-Watches.jpg" alt="smart watch" /></a
         ></swiper-slide>
         <swiper-slide
           ><a href="./clearance.html">
             <img
               src="./assets/images/Mobile-Phones.jpg"
-              alt="mobile phone"
-            /></a
+              alt="mobile phone" /></a
         ></swiper-slide>
       </swiper-container>
     </section>
@@ -247,238 +261,229 @@
     <section id="recommended" class="bg-white">
       <div class="container text-center">
         <h1 class="text-5xl font-extrabold pb-10 pt-10">RECOMMENDED FOR YOU</h1>
-        <div class="card-wrapper flex flex-wrap">
-          <swiper-container
-            class="mySwiper"
-            pagination="true"
-            pagination-clickable="true"
-            navigation="true"
-            space-between="30"
-            loop="true"
+        <div class="card-wrapper">
+          <div
+            id="recomendeds"
+            class="grid grid-cols-4 overflow-x-auto"
           >
-            <swiper-slide>
-              <div class="card w-[25%]">
-                <div class="card-img w-[200[px] h-[200px]">
+          
+            <!-- <div class="card">
+                <div class="card-img w-[200px] h-[200px]">
                   <img
                     src="./assets/images/IPG-card1jpg.jpg"
                     class="object-cover w-full h-full"
                   />
                 </div>
-                <p class="pb-5 pt-6 text-gray-500">
-                  Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
+                <p class="cardTitle pb-5 pt-6 text-gray-500">
+                 tablet Grandstream GWN7831 Enterprise Layer 3 efso  Managed Aggregation
                   Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
                 </p>
-                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+                <span class="cardPrice block font-semibold pb-5 pt-3">AUD 475$</span>
                 <button
-                  class="py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
+                  class="addBtn py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
                 >
                   ADD TO CART
                 </button>
-              </div>
-              <div class="card w-[25%]">
-                <div class="card-img w-[200[px] h-[200px]">
+              </div> -->
+            <!-- <div class="card">
+                <div class="card-img w-[200px] h-[200px]">
                   <img
                     src="./assets/images/MF-SG-card2BLK.jpg"
                     class="object-contain w-full h-full"
                   />
                 </div>
-                <p class="pb-5 pt-6 text-gray-500">
+                <p class="cardTitle pb-5 pt-6 text-gray-500"> card5
                   Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
                   Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
                 </p>
-                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+                <span class="cardPrice block font-semibold pb-5 pt-3">AUD 475$</span>
                 <button
-                  class="py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
+                  class="addBtn py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
                 >
                   ADD TO CART
                 </button>
               </div>
-              <div class="card w-[25%]">
-                <div class="card-img w-[200[px] h-[200px]">
+              <div class="card">
+                <div class="card-img w-[200px] h-[200px]">
                   <img
                     src="./assets/images/33827-card4320EX-Speedlite-Flash.jpg"
                     class="object-cover w-full h-full"
                   />
                 </div>
-                <p class="pb-5 pt-6 text-gray-500">
+                <p class="cardTitle pb-5 pt-6 text-gray-500">phone
                   Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
                   Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
                 </p>
-                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+                <span class="cardPrice block font-semibold pb-5 pt-3">AUD 475$</span>
                 <button
-                  class="py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
+                  class="addBtn py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
                 >
                   ADD TO CART
                 </button>
               </div>
-              <div class="card w-[25%]">
+              <div class="card">
                 <div class="card-img w-[200[px] h-[200px]">
                   <img
                     src="./assets/images/IPG-card1jpg.jpg"
                     class="object-cover w-full h-full"
                   />
                 </div>
-                <p class="pb-5 pt-6 text-gray-500">
+                <p class="cardTitle pb-5 pt-6 text-gray-500">
                   Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
                   Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
                 </p>
-                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+                <span class="cardPrice block font-semibold pb-5 pt-3">AUD 475$</span>
                 <button
-                  class="py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
+                  class="addBtn py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
                 >
                   ADD TO CART
                 </button>
               </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="card w-[25%]">
+              <div class="card">
                 <div class="card-img w-[200[px] h-[200px]">
                   <img
                     src="./assets/images/33827-card4320EX-Speedlite-Flash.jpg"
                     class="object-cover w-full h-full"
                   />
                 </div>
-                <p class="pb-5 pt-6 text-gray-500">
+                <p class="cardTitle pb-5 pt-6 text-gray-500">
                   Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
                   Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
                 </p>
-                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+                <span class="cardPrice block font-semibold pb-5 pt-3">AUD 475$</span>
                 <button
-                  class="py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
+                  class="addBtn py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
                 >
                   ADD TO CART
                 </button>
               </div>
-              <div class="card w-[25%]">
+              <div class="card">
                 <div class="card-img w-[200[px] h-[200px]">
                   <img
                     src="./assets/images/52174-Canon-8x20-IS-card5jpg.jpg"
                     class="object-cover w-full h-full"
                   />
                 </div>
-                <p class="pb-5 pt-6 text-gray-500">
+                <p class="cardTitle pb-5 pt-6 text-gray-500">
                   Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
                   Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
                 </p>
-                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+                <span class="cardPrice block font-semibold pb-5 pt-3">AUD 475$</span>
                 <button
-                  class="py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
+                  class="addBtn py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
                 >
                   ADD TO CART
                 </button>
               </div>
-              <div class="card w-[25%]">
+              <div class="card">
                 <div class="card-img w-[200[px] h-[200px]">
                   <img
                     src="./assets/images/66351-Belkin-Soundform-Play-TWS-Earbuds-Black-card3jpeg.jpeg"
                     class="object-cover w-full h-full"
                   />
                 </div>
-                <p class="pb-5 pt-6 text-gray-500">
+                <p class="cardTitle pb-5 pt-6 text-gray-500">
                   Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
                   Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
                 </p>
-                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+                <span class="cardPrice block font-semibold pb-5 pt-3">AUD 475$</span>
                 <button
-                  class="py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
+                  class="addBtn py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
                 >
                   ADD TO CART
                 </button>
               </div>
-              <div class="card w-[25%]">
+              <div class="card">
                 <div class="card-img w-[200[px] h-[200px]">
                   <img
                     src="./assets/images/52174-Canon-8x20-IS-card5jpg.jpg"
                     class="object-cover w-full h-full"
                   />
                 </div>
-                <p class="pb-5 pt-6 text-gray-500">
+                <p class="cardTitle pb-5 pt-6 text-gray-500">
                   Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
                   Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
                 </p>
-                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+                <span class="cardPrice block font-semibold pb-5 pt-3">AUD 475$</span>
                 <button
-                  class="py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
+                  class="addBtn py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
                 >
                   ADD TO CART
                 </button>
               </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="card w-[25%]">
+              <div class="card">
                 <div class="card-img w-[200[px] h-[200px]">
                   <img
                     src="./assets/images/IPG-card1jpg.jpg"
                     class="object-cover w-full h-full"
                   />
                 </div>
-                <p class="pb-5 pt-6 text-gray-500">
+                <p class="cardTitle pb-5 pt-6 text-gray-500">
                   Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
                   Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
                 </p>
-                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+                <span class="cardPrice block font-semibold pb-5 pt-3">AUD 475$</span>
                 <button
-                  class="py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
+                  class="addBtn py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
                 >
                   ADD TO CART
                 </button>
               </div>
-              <div class="card w-[25%]">
+              <div class="card">
                 <div class="card-img w-[200[px] h-[200px]">
                   <img
                     src="./assets/images/IPG-card1jpg.jpg"
                     class="object-cover w-full h-full"
                   />
                 </div>
-                <p class="pb-5 pt-6 text-gray-500">
+                <p class="cardTitle pb-5 pt-6 text-gray-500">
                   Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
                   Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
                 </p>
-                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+                <span class="cardPrice block font-semibold pb-5 pt-3">AUD 475$</span>
                 <button
-                  class="py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
+                  class="addBtn py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
                 >
                   ADD TO CART
                 </button>
               </div>
-              <div class="card w-[25%]">
+              <div class="card">
                 <div class="card-img w-[200[px] h-[200px]">
                   <img
                     src="./assets/images/IPG-card1jpg.jpg"
                     class="object-cover w-full h-full"
                   />
                 </div>
-                <p class="pb-5 pt-6 text-gray-500">
+                <p class="cardTitle pb-5 pt-6 text-gray-500">
                   Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
                   Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
                 </p>
-                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+                <span class="cardPrice block font-semibold pb-5 pt-3">AUD 475$</span>
                 <button
-                  class="py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
+                  class="addBtn py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
                 >
                   ADD TO CART
                 </button>
               </div>
-              <div class="card w-[25%]">
+              <div class="card">
                 <div class="card-img w-[200[px] h-[200px]">
                   <img
                     src="./assets/images/IPG-card1jpg.jpg"
                     class="object-cover w-full h-full"
                   />
                 </div>
-                <p class="pb-5 pt-6 text-gray-500">
+                <p class="cardTitle pb-5 pt-6 text-gray-500">
                   Grandstream GWN7831 Enterprise Layer 3 Managed Aggregation
                   Switch, 20 x SFP, 4 x SFP/GigE Combo, 4 x SFP+, Redundant PSU
                 </p>
-                <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
+                <span class="cardPrice block font-semibold pb-5 pt-3">AUD 475$</span>
                 <button
-                  class="py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
+                  class="addBtn py-2 px-5 mb-7 text-[#0099CC] font-semibold text-lg border-2 border-solid border-[#0099CC]"
                 >
                   ADD TO CART
                 </button>
-              </div>
-            </swiper-slide>
-          </swiper-container>
+              </div> -->
+          </div>
         </div>
       </div>
     </section>
@@ -486,118 +491,253 @@
 
     <!-- reclam section start -->
     <section id="reclam">
-      <div class="reclam mt-6 mb-6 ">
-        <button class="w-full h-64">
-          <img src="./assets/images/reclamjpg.jpg" alt="reclam" class="object-cover w-full h-full">
+      <div class="reclam mt-6 mb-6">
+        <button class="w-full h-full">
+          <img
+            src="./assets/images/reclamjpg.jpg"
+            alt="reclam"
+            class="object-fit md:block sm:hidden w-full h-full"
+          />
+          <img
+            src="./assets/images/reclamres.jpg"
+            class="object-fit sm:block md:hidden w-full h-full"
+            alt="reclam"
+          />
         </button>
       </div>
     </section>
     <!-- reclam section end -->
 
     <!-- category section start -->
-     <section id="category">
+    <section id="category">
       <div class="container">
-        <h1 class="text-5xl font-extrabold tracking-wide p-5 pb-10">BROWSE POPULAR CATEGORIES IN OUR RANGE</h1>
-        <div class="category__wrapper grid grid-cols-3 gap-5 justify-center mb-6">
-          <div class="category__item bg-black  relative overflow-hidden text-center pb-4">
-            <div class="category-img ">
-              <img src="./assets/images/category1notebooksx.jpg" class="object-cover w-full h-full transition-transform duration-300 ease-in-out transform hover:scale-110 hover:z-10">
+        <h1
+          class="md:text-5xl sm:text-xl font-extrabold tracking-wide p-5 pb-10"
+        >
+          BROWSE POPULAR CATEGORIES IN OUR RANGE
+        </h1>
+        <div
+          class="category__wrapper grid md:grid-cols-3 gap-5 justify-center mb-6"
+        >
+          <div
+            class="category__item bg-black relative overflow-hidden text-center pb-4"
+          >
+            <div class="category-img">
+              <img
+                src="./assets/images/category1notebooksx.jpg"
+                class="object-cover w-full h-full transition-transform duration-300 ease-in-out transform hover:scale-110 hover:z-10"
+              />
             </div>
-            <button class="text-[#0099CC] border-2 px-5 py-2 mt-6 border-[#0099CC] hover:bg-[#0099CC] hover:text-white font-semibold  ease-out duration-300">Laptop & Notebooks <i class="fa-solid fa-angle-right"></i></button>
-            <p class="text-white text-sm p-3">Get the best and latest at affordable prices.</p>
+            <a href="./clearance.html">
+              <button
+                class="text-[#0099CC] border-2 px-5 py-2 mt-6 border-[#0099CC] hover:bg-[#0099CC] hover:text-white font-semibold ease-out duration-300"
+              >
+                Laptop & Notebooks <i class="fa-solid fa-angle-right"></i>
+              </button>
+            </a>
+            <p class="text-white text-sm p-3">
+              Get the best and latest at affordable prices.
+            </p>
           </div>
-          <div class="category__item bg-black  relative overflow-hidden text-center pb-4">
-            <div class="category-img ">
-              <img src="./assets/images/category2jpg.jpg" class="object-cover w-full h-full transition-transform duration-300 ease-in-out transform hover:scale-110 hover:z-10">
+          <div
+            class="category__item bg-black relative overflow-hidden text-center pb-4"
+          >
+            <div class="category-img">
+              <img
+                src="./assets/images/category2jpg.jpg"
+                class="object-cover w-full h-full transition-transform duration-300 ease-in-out transform hover:scale-110 hover:z-10"
+              />
             </div>
-            <button class="text-[#0099CC] border-2 px-5 py-2 mt-6 border-[#0099CC] hover:bg-[#0099CC] hover:text-white font-semibold  ease-out duration-300">Smart watches <i class="fa-solid fa-angle-right"></i></button>
-            <p class="text-white text-sm p-3">Don’t be left in time, get the best Smart Watches.</p>
+            <a href="./clearance.html">
+              <button
+                class="text-[#0099CC] border-2 px-5 py-2 mt-6 border-[#0099CC] hover:bg-[#0099CC] hover:text-white font-semibold ease-out duration-300"
+              >
+                Smart watches <i class="fa-solid fa-angle-right"></i>
+              </button>
+            </a>
+            <p class="text-white text-sm p-3">
+              Don’t be left in time, get the best Smart Watches.
+            </p>
           </div>
-          <div class="category__item bg-black  relative overflow-hidden text-center pb-4">
+          <div
+            class="category__item bg-black relative overflow-hidden text-center pb-4"
+          >
             <div class="category-img overflow-hidden">
-              <img src="./assets/images/mobilex.jpg" class="object-cover w-full h-full transition-transform duration-300 ease-in-out transform hover:scale-110 hover:z-10">
+              <img
+                src="./assets/images/mobilex.jpg"
+                class="object-cover w-full h-full transition-transform duration-300 ease-in-out transform hover:scale-110 hover:z-10"
+              />
             </div>
-            <button class="text-[#0099CC] border-2 px-5 py-2 mt-6 border-[#0099CC] hover:bg-[#0099CC] hover:text-white font-semibold  ease-out duration-300">Mobile phones <i class="fa-solid fa-angle-right"></i></button>
-            <p class="text-white text-sm p-3">Get the latest and smartest from all famous brands.</p>
+            <a href="./clearance.html">
+              <button
+                class="text-[#0099CC] border-2 px-5 py-2 mt-6 border-[#0099CC] hover:bg-[#0099CC] hover:text-white font-semibold ease-out duration-300"
+              >
+                Mobile phones <i class="fa-solid fa-angle-right"></i></button
+            ></a>
+            <p class="text-white text-sm p-3">
+              Get the latest and smartest from all famous brands.
+            </p>
           </div>
-          <div class="category__item bg-black  relative overflow-hidden text-center pb-4">
-            <div class="category-img ">
-              <img src="./assets/images/cate4phonesx.jpg" class="object-cover w-full h-full transition-transform duration-300 ease-in-out transform hover:scale-110 hover:z-10">
+          <div
+            class="category__item bg-black relative overflow-hidden text-center pb-4"
+          >
+            <div class="category-img">
+              <img
+                src="./assets/images/cate4phonesx.jpg"
+                class="object-cover w-full h-full transition-transform duration-300 ease-in-out transform hover:scale-110 hover:z-10"
+              />
             </div>
-            <button class="text-[#0099CC] border-2 px-5 py-2 mt-6 border-[#0099CC] hover:bg-[#0099CC] hover:text-white font-semibold  ease-out duration-300">IP phones <i class="fa-solid fa-angle-right"></i></button>
-            <p class="text-white text-sm p-3">Be on the next level of communication.</p>
+            <a href="./clearance.html">
+              <button
+                class="text-[#0099CC] border-2 px-5 py-2 mt-6 border-[#0099CC] hover:bg-[#0099CC] hover:text-white font-semibold ease-out duration-300"
+              >
+                IP phones <i class="fa-solid fa-angle-right"></i>
+              </button>
+            </a>
+            <p class="text-white text-sm p-3">
+              Be on the next level of communication.
+            </p>
           </div>
-          <div class="category__item bg-black  relative overflow-hidden text-center pb-4">
-            <div class="category-img ">
-              <img src="./assets/images/cate5jpg.jpg" class="object-cover w-full h-full transition-transform duration-300 ease-in-out transform hover:scale-110 hover:z-10">
+          <div
+            class="category__item bg-black relative overflow-hidden text-center pb-4"
+          >
+            <div class="category-img">
+              <img
+                src="./assets/images/cate5jpg.jpg"
+                class="object-cover w-full h-full transition-transform duration-300 ease-in-out transform hover:scale-110 hover:z-10"
+              />
             </div>
-            <button class="text-[#0099CC] border-2 px-5 py-2 mt-6 border-[#0099CC] hover:bg-[#0099CC] hover:text-white font-semibold  ease-out duration-300">Tablets <i class="fa-solid fa-angle-right"></i></button>
-            <p class="text-white text-sm p-3">Get the best Tablets on the market.</p>
+            <a href="./clearance.html">
+              <button
+                class="text-[#0099CC] border-2 px-5 py-2 mt-6 border-[#0099CC] hover:bg-[#0099CC] hover:text-white font-semibold ease-out duration-300"
+              >
+                Tablets <i class="fa-solid fa-angle-right"></i>
+              </button>
+            </a>
+            <p class="text-white text-sm p-3">
+              Get the best Tablets on the market.
+            </p>
           </div>
-          <div class="category__item bg-black  relative overflow-hidden text-center pb-4">
-            <div class="category-img ">
-              <img src="./assets/images/cate6jpg.jpg" class="object-cover w-full h-full transition-transform duration-300 ease-in-out transform hover:scale-110 hover:z-10">
+          <div
+            class="category__item bg-black relative overflow-hidden text-center pb-4"
+          >
+            <div class="category-img">
+              <img
+                src="./assets/images/cate6jpg.jpg"
+                class="object-cover w-full h-full transition-transform duration-300 ease-in-out transform hover:scale-110 hover:z-10"
+              />
             </div>
-            <button class="text-[#0099CC] border-2 px-5 py-2 mt-6 border-[#0099CC] hover:bg-[#0099CC] hover:text-white font-semibold  ease-out duration-300">Monitors <i class="fa-solid fa-angle-right"></i></button>
+            <a href="./clearance.html">
+              <button
+                class="text-[#0099CC] border-2 px-5 py-2 mt-6 border-[#0099CC] hover:bg-[#0099CC] hover:text-white font-semibold ease-out duration-300"
+              >
+                Monitors <i class="fa-solid fa-angle-right"></i>
+              </button>
+            </a>
             <p class="text-white text-sm p-3">Upgrade to the next big thing.</p>
           </div>
         </div>
-        </div>
-     </section>
+      </div>
+    </section>
     <!-- category section end -->
 
     <!-- shopNow section start -->
-     <section id="shopNow">
+    <section id="shopNow">
       <div class="container">
-        <div class="shopNow-wrapper grid grid-cols-2 ">
+        <div class="shopNow-wrapper grid md:grid-cols-2">
           <div class="shopNow__item w-full h-[280px] relative">
-            <img src="./assets/images/Screenshot 2024-10-13 163122.jpg" class="w-full h-full">
+            <img
+              src="./assets/images/Screenshot 2024-10-13 163122.jpg"
+              class="w-full h-full"
+            />
             <div class="text absolute top-20 right-10 text-white text-right">
               <p class="text-4xl font-extrabold">Gaming</p>
               <p class="text-4xl font-extrabold">Essentials</p>
-              <p class="text-sm font-semibold pt-3 pb-3">Set the gears up and shop!</p>
-              <button class="text-gray-500 border pt-2 border-white bg-white text-xs font-bold px-3 py-2 hover:bg-slate-300  hover:duration-300">SHOP NOW</button>
+              <p class="text-sm font-semibold pt-3 pb-3">
+                Set the gears up and shop!
+              </p>
+              <a href="./clearance.html">
+                <button
+                  class="text-gray-500 border pt-2 border-white bg-white text-xs font-bold px-3 py-2 hover:bg-slate-300 hover:duration-300"
+                >
+                  SHOP NOW
+                </button>
+              </a>
             </div>
           </div>
           <div class="shopNow__item w-full h-[280px] relative">
-            <img src="./assets/images/Screenshot 2024-10-13 163404.jpg" class="w-full h-full">
+            <img
+              src="./assets/images/Screenshot 2024-10-13 163404.jpg"
+              class="w-full h-full"
+            />
             <div class="text absolute top-20 left-10 text-white text-left">
               <p class="text-4xl font-extrabold">Gadgets</p>
               <p class="text-4xl font-extrabold">Galore</p>
-              <p class="text-sm font-semibold pt-3 pb-3">Own the latest gadgets at affordable prices!</p>
-              <button class="text-gray-500 border pt-2 border-white bg-white text-xs font-bold px-3 py-2 hover:bg-slate-300  hover:duration-300">SHOP NOW</button>
+              <p class="text-sm font-semibold pt-3 pb-3">
+                Own the latest gadgets at affordable prices!
+              </p>
+              <a href="./clearance.html">
+                <button
+                  class="text-gray-500 border pt-2 border-white bg-white text-xs font-bold px-3 py-2 hover:bg-slate-300 hover:duration-300"
+                >
+                  SHOP NOW
+                </button>
+              </a>
             </div>
           </div>
           <div class="shopNow__item w-full h-[280px] relative">
-            <img src="./assets/images/Screenshot 2024-10-13 163437.jpg" class="w-full h-full">
+            <img
+              src="./assets/images/Screenshot 2024-10-13 163437.jpg"
+              class="w-full h-full"
+            />
             <div class="text absolute top-20 right-10 text-white text-right">
               <p class="text-4xl font-extrabold">Storage</p>
               <p class="text-4xl font-extrabold">Sale</p>
-              <p class="text-sm font-semibold pt-3 pb-3">Don’t run out of memories with our storage <br> devices sale! </p>
-              <button class="text-gray-500 border pt-2 border-white bg-white text-xs font-bold px-3 py-2 hover:bg-slate-300  hover:duration-300">SHOP NOW</button>
+              <p class="text-sm font-semibold pt-3 pb-3">
+                Don’t run out of memories with our storage <br />
+                devices sale!
+              </p>
+              <a href="./clearance.html">
+                <button
+                  class="text-gray-500 border pt-2 border-white bg-white text-xs font-bold px-3 py-2 hover:bg-slate-300 hover:duration-300"
+                >
+                  SHOP NOW
+                </button>
+              </a>
             </div>
           </div>
           <div class="shopNow__item w-full h-[280px] relative">
-            <img src="./assets/images/Screenshot 2024-10-13 171305.png" class="w-full h-full">
+            <img
+              src="./assets/images/Screenshot 2024-10-13 171305.png"
+              class="w-full h-full"
+            />
             <div class="text absolute top-20 left-10 text-white text-left">
               <p class="text-4xl font-extrabold">Gadgets</p>
               <p class="text-4xl font-extrabold">Galore</p>
-              <p class="text-sm font-semibold pt-3 pb-3">Own the latest gadgets at affordable prices!</p>
-              <button class="text-gray-500 border mt-5 border-white bg-white text-xs font-bold px-3 py-2 hover:bg-slate-300  hover:duration-300">SHOP NOW</button>
+              <p class="text-sm font-semibold pt-3 pb-3">
+                Own the latest gadgets at affordable prices!
+              </p>
+              <a href="./clearance.html">
+                <button
+                  class="text-gray-500 border mt-5 border-white bg-white text-xs font-bold px-3 py-2 hover:bg-slate-300 hover:duration-300"
+                >
+                  SHOP NOW
+                </button>
+              </a>
             </div>
           </div>
         </div>
       </div>
-     </section>
-     <!-- shopNow section end -->
+    </section>
+    <!-- shopNow section end -->
 
     <!-- whatHot section start -->
-     <section id="whatHot" class="bg-white">
+    <section id="whatHot" class="bg-white">
       <div class="container text-center">
         <h1 class="text-5xl font-extrabold pb-10 pt-10">WHAT'S HOT</h1>
         <div class="card-wrapper flex flex-wrap mb-10 ml-5 mr-5">
           <swiper-container
-            class="mySwiper "
+            class="mySwiper"
             pagination="true"
             pagination-clickable="true"
             navigation="true"
@@ -630,7 +770,7 @@
                   />
                 </div>
                 <p class="pb-5 pt-6 text-gray-500 h-[100px]">
-                JBL flip 6 speaker (midinight black)
+                  JBL flip 6 speaker (midinight black)
                 </p>
                 <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
                 <button
@@ -647,7 +787,8 @@
                   />
                 </div>
                 <p class="pb-5 pt-6 text-gray-500 h-[100px]">
-                  5V / 2A AU Power Adapter for T29/T3x/T46/T48/T5x series IPPhones – AU Model
+                  5V / 2A AU Power Adapter for T29/T3x/T46/T48/T5x series
+                  IPPhones – AU Model
                 </p>
                 <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
                 <button
@@ -664,7 +805,8 @@
                   />
                 </div>
                 <p class="pb-5 pt-6 text-gray-500 h-[100px]">
-                  LEADER Intel PC Stick SC7, Intel Quad Core Z8350, 4GB, 64GB Storage.
+                  LEADER Intel PC Stick SC7, Intel Quad Core Z8350, 4GB, 64GB
+                  Storage.
                 </p>
                 <span class="block font-semibold pb-5 pt-3">AUD 475$</span>
                 <button
@@ -825,7 +967,7 @@
           </swiper-container>
         </div>
       </div>
-     </section>
+    </section>
     <!-- whatHot section end -->
 
     <!-- followUs section start -->
@@ -843,9 +985,19 @@
               </p>
             </div>
             <div class="followUs-icon text-3xl">
-              <i class="fa-brands fa-facebook-f pr-2"></i>
-              <i class="fa-brands fa-instagram pr-2"></i>
-              <i class="fa-brands fa-linkedin pr-2"></i>
+              <a
+                href="https://www.facebook.com/people/Tech-Cart/100064256131972/"
+              >
+                <i class="fa-brands fa-facebook-f pr-2"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fdownload%2Frequest%2F%3F__coig_login%3D1"
+              >
+                <i class="fa-brands fa-instagram pr-2"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/tech-cart/">
+                <i class="fa-brands fa-linkedin pr-2"></i>
+              </a>
             </div>
           </div>
           <div
@@ -876,7 +1028,7 @@
           </div>
         </div>
       </div>
-      <div class="bg-[#41BBEB] text-white pt-6 pb-6">
+      <div class="bg-[#41BBEB] md:block sm:hidden text-white pt-6 pb-6">
         <div class="container flex justify-center items-center">
           <div class="customerCcare w-[25%] pr-3">
             <h2 class="text-2xl font-bold">24/7 Customer Care</h2>
@@ -1094,7 +1246,7 @@
 
     <!-- footer start -->
     <footer>
-      <div class="footer-wrapper text-white bg-black pb-10">
+      <div class="footer-wrapper md:block sm:hidden text-white bg-black pb-10">
         <div class="container">
           <div
             class="footer-content flex justify-between footer-title pb-12 pt-3"
@@ -1145,6 +1297,6 @@
       </div>
     </footer>
     <!-- footer end -->
-     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   </body>
 </html>
