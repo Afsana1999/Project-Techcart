@@ -1,3 +1,4 @@
+//create product
 const products = [
   {
     id: 1,
@@ -44,15 +45,13 @@ const products = [
   {
     id: 7,
     imgUrl: "./assets/images/MF-SG-card2BLK.jpg",
-    description:
-      "2tablet Grandstream GWN7831 Enterprise Layer 3 efso  Managed Aggregation  Switch, ",
+    description: "telefon lorem ipsum lorem, ",
     price: 550,
   },
   {
     id: 8,
     imgUrl: "./assets/images/MF-SG-card2BLK.jpg",
-    description:
-      "2tablet Grandstream GWN7831 Enterprise Layer 3 efso  Managed Aggregation  Switch, ",
+    description: "laptop Managed Aggregation  Switch, ",
     price: 550,
   },
 ];
@@ -66,7 +65,7 @@ function createRecommendeds() {
                 <div class="card-img h-[200px]">
                   <img
                     src="${product.imgUrl}"
-                    class="object-cover w-full h-full"
+                    class="object-contain w-full h-full"
                   />
                 </div>
                 <p class="cardTitle pb-5 h-[120px] pt-6 text-gray-500">
@@ -85,7 +84,6 @@ function createRecommendeds() {
   });
 }
 createRecommendeds();
-
 
 //search
 function search(title) {
@@ -107,19 +105,20 @@ function search(title) {
   }
 }
 
+//createNewTAg
 const createSearchTag = (product) => {
   let p = document.createElement("p");
-  p.classList.add("py-4","flex")
-  p.innerHTML = `<img class="w-[40px] h-[40px]" src="${product.imgUrl}"> Title: ${product.description}  <b>Price:${product.price}AUD</b>`;
+  p.classList.add("py-4", "flex");
+  p.innerHTML = `<img class="w-[40px] h-[40px]" src="${product.imgUrl}"> Title: ${product.description}  <b class="pl-2">Price:${product.price}AUD</b>`;
   return p;
 };
 const searchInput = document.getElementById("searchInput");
-console.log(searchInput);
 
 searchInput.addEventListener("input", () => {
   search(searchInput.value);
 });
 
+//dropdown menu
 let dropAnchor = document.querySelector(".dropAnchor");
 let dropDownMenu = document.querySelector(".dropDown-menu");
 dropAnchor.addEventListener("click", (event) => {
@@ -136,3 +135,73 @@ document.addEventListener("click", (event) => {
   }
 });
 
+//addBtn click(add too cart start)
+
+let addBtn = document.querySelectorAll(".addBtn");
+
+addBtn.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    let addBtnParent = event.target.parentNode;
+
+    let isId = addBtnParent.querySelector("#id");
+    let id = isId.textContent;
+    createBasket(id);
+    showBAsket();
+    let hidden=document.querySelector(".hidden")
+    hidden.classList.remove("hidden")
+
+    let closeBtn=document.querySelector(".closeBtn")
+    closeBtn.addEventListener("click",()=>{
+      hidden.classList.add("hidden")
+    })
+    
+  });
+});
+
+//createBasketDiv
+function createBasket(id) {
+  let basketArr = JSON.parse(localStorage.getItem("basketArr")) || [];
+  let isProducts = basketArr.find((mId) => mId.id == id);
+
+  if (isProducts) {
+    isProducts.count++;
+
+    const index = basketArr.findIndex((mId) => mId.id == id);
+    console.log(index);
+
+    if (index !== -1) {
+      basketArr[index] = isProducts;
+    }
+  } else {
+    basketArr.push({
+      id: id,
+      count: 1,
+    });
+  }
+  localStorage.setItem("basketArr", JSON.stringify(basketArr));
+}
+
+//showbasketcreate
+function showBAsket() {
+  let basketArr = JSON.parse(localStorage.getItem("basketArr")) || [];
+
+  let basketProduct = document.querySelector(".basket-product");
+
+  if (basketArr.length === 0) {
+    basketProduct.innerHTML = "<p>sebet bosdur.</p>";
+    return;
+  }
+  basketProduct.InnetHtml = "";
+
+  basketArr.forEach((item) => {
+    const product = products.find((p) => p.id == item.id);
+    const basketItem = `
+      <div class="py-3 border-b-2 flex items-center justify-between px-2">
+      <img src="${product.imgUrl}" width="15%" >
+          <p>${product.description}</p>
+          <button class="border-2  rounded-full px-1 text-gray-400 hover:text-gray-700 hover:duration-500"> <i class="fa-solid fa-xmark"></i></button>
+          
+    `;
+    basketProduct.innerHTML += basketItem;
+  });
+}
