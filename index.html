@@ -46,7 +46,8 @@
   </head>
   <body class="font-sans">
     <!-- basket section start -->
-    <section id="basket" class="hidden">
+    <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
+    <section id="basket" class="hidden fixed left-0 right-0 top-0 bottom-0 z-50">
       <div class="basketDiv h-screen w-[350px] px-5 bg-white absolute z-50 right-0">
         <div class="text-right text-4xl p-2 text-gray-700 hover:text-red-700 hover:ease-in-out hover:duration-300">
           <button class="closeBtn">
@@ -54,16 +55,23 @@
          </button>
         </div>
         <h1 class="font-extrabold text-2xl text-center border-b-2 flex justify-center pb-3">CART</h1>
-        <div class="basket-product">
-            <div class="py-3 border-b-2 flex items-center flex-wrap  justify-between px-2"><img src="./assets/images/card6xperia-1-iv-dual-sim-5g-5.jpg" width="15%" >
-           <p>Lorem ipsum dolor sit amet.</p>
-           <button class="border-2  rounded-full px-1 text-gray-400 hover:text-gray-700 hover:duration-500"> <i class="fa-solid fa-xmark"></i></button>
+        <div class="basket-product py-2">
+            <div class="py-3  flex items-center  justify-between px-2">
+              <img src="./assets/images/card6xperia-1-iv-dual-sim-5g-5.jpg" width="15%" >
+           <p>Lorem ipsum dolor sit amet.
+           
+           </p>
+           <button class=" border-2 rounded-full px-1 text-gray-400 hover:text-gray-700 hover:duration-500"> <i class="fa-solid fa-xmark"></i></button>          
            </div> 
+           <div>
+            <p class="border-b-2 productPrice block text-center">caunt x aud$price</p>
+           </div>
         </div>
-        <div class="subtotal text-center text-xl py-3 border-b-2"><b> Subtotal: AUD $46</b></div>
+        <div class="subtotal block text-center text-xl py-3 border-b-2"><b> Subtotal: AUD $46</b></div>
       </div>
      </section>
     <!-- basket section end -->
+
     <!-- header start -->
     <header class="bg-[#0099CC]" id="top">
       <div class="container mx-auto">
@@ -125,7 +133,7 @@
               </button>
             </div>
             <div class="addToCart">
-              <button><i class="fa-solid fa-cart-plus text-2xl"></i></button>
+              <button id="openBasketButton"><i class="fa-solid fa-cart-plus text-2xl"></i></button>
               <button class="addToCart__Btn sm:hidden md:block">
                 CART/AUD <span>$0</span>
               </button>

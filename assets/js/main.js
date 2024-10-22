@@ -138,25 +138,42 @@ document.addEventListener("click", (event) => {
 //addBtn click(add too cart start)
 
 let addBtn = document.querySelectorAll(".addBtn");
+let basketSection = document.querySelector("#basket");
+let overlay = document.querySelector("#overlay");
 
 addBtn.forEach((btn) => {
   btn.addEventListener("click", (event) => {
+    document.body.classList.add("pointer-events-none", "overflow-hidden");
+    basketSection.classList.add("pointer-events-auto");
+    overlay.classList.remove("hidden");
+
     let addBtnParent = event.target.parentNode;
 
     let isId = addBtnParent.querySelector("#id");
+
     let id = isId.textContent;
+
     createBasket(id);
     showBAsket();
-    let hidden=document.querySelector(".hidden")
-    hidden.classList.remove("hidden")
 
-    let closeBtn=document.querySelector(".closeBtn")
-    closeBtn.addEventListener("click",()=>{
-      hidden.classList.add("hidden")
-    })
-    
+
   });
 });
+//closebasket
+function closeBasket(){
+  let basketHidden = document.querySelector(".hidden");
+  basketHidden.classList.remove("hidden");
+  
+  let closeBtn = document.querySelector(".closeBtn");
+  
+  closeBtn.addEventListener("click", () => {
+    overlay.classList.add("hidden");
+    basketHidden.classList.add("hidden");
+  
+    document.body.classList.remove("pointer-events-none", "overflow-hidden");
+  });
+}
+
 
 //createBasketDiv
 function createBasket(id) {
@@ -167,7 +184,6 @@ function createBasket(id) {
     isProducts.count++;
 
     const index = basketArr.findIndex((mId) => mId.id == id);
-    console.log(index);
 
     if (index !== -1) {
       basketArr[index] = isProducts;
@@ -179,6 +195,7 @@ function createBasket(id) {
     });
   }
   localStorage.setItem("basketArr", JSON.stringify(basketArr));
+  closeBasket()
 }
 
 //showbasketcreate
@@ -196,12 +213,37 @@ function showBAsket() {
   basketArr.forEach((item) => {
     const product = products.find((p) => p.id == item.id);
     const basketItem = `
-      <div class="py-3 border-b-2 flex items-center justify-between px-2">
-      <img src="${product.imgUrl}" width="15%" >
+   
+        <div class="py-1 flex items-center justify-between px-2">
+          <img src="${product.imgUrl}" width="15%" >
           <p>${product.description}</p>
-          <button class="border-2  rounded-full px-1 text-gray-400 hover:text-gray-700 hover:duration-500"> <i class="fa-solid fa-xmark"></i></button>
-          
-    `;
+          <button class="productDelete border-2  rounded-full px-1 text-gray-400 hover:text-gray-700 hover:duration-500"> <i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div>
+          <p class="border-b-2 text-gray-500 font-semibold py-2 productPrice block text-center">
+          ${product.count} x AUD $${product.price}</p>
+        </div>
+   `;
+
     basketProduct.innerHTML += basketItem;
   });
+
+ 
 }
+
+function openBasket() {
+  const basketSection = document.querySelector("#basket");
+  const overlay = document.querySelector("#overlay");
+
+  document.body.classList.add("pointer-events-none", "overflow-hidden");
+  basketSection.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+  showBAsket();
+
+}
+
+document.getElementById("openBasketButton").addEventListener("click", () => {
+  openBasket();
+  
+});
+
