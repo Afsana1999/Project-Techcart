@@ -258,5 +258,21 @@ registerBtn.addEventListener("click",()=>{
   popubLogin.classList.remove("hidden")
   document.body.classList.add("overflow-hidden")
 })
-//burgerMenu
 
+//burgerMenu
+let burgerMenu=document.querySelector(".burgerMenu")
+let responsivBurger=document.getElementById("responsivBurger")
+let burgerClose=document.querySelector(".burgerClose")
+//open
+burgerClose.addEventListener("click",()=>{
+  responsivBurger.classList.add("hidden")
+  document.body.classList.remove("overflow-hidden")
+  overlayregister.classList.add("hidden")
+
+})
+//close
+burgerMenu.addEventListener("click",()=>{
+  responsivBurger.classList.remove("hidden")
+  document.body.classList.add("overflow-hidden")
+  overlayregister.classList.remove("hidden")
+})
