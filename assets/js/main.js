@@ -161,7 +161,7 @@ addBtn.forEach((btn) => {
 });
 //closebasket
 function closeBasket(){
-  let basketHidden = document.querySelector(".hidden");
+  let basketHidden = document.querySelector(".basketHidden");
   basketHidden.classList.remove("hidden");
   
   let closeBtn = document.querySelector(".closeBtn");
@@ -230,7 +230,7 @@ function showBAsket() {
 
  
 }
-
+//openbasketicon
 function openBasket() {
   const basketSection = document.querySelector("#basket");
   const overlay = document.querySelector("#overlay");
@@ -246,4 +246,17 @@ document.getElementById("openBasketButton").addEventListener("click", () => {
   openBasket();
   
 });
+
+//registerBtn click
+let registerBtn=document.querySelector(".registerBtn")
+let popubLogin=document.querySelector(".popubLogin")
+let overlayregister=document.getElementById("overlayregister")
+
+
+registerBtn.addEventListener("click",()=>{
+  overlayregister.classList.remove("hidden")
+  popubLogin.classList.remove("hidden")
+  document.body.classList.add("overflow-hidden")
+})
+//burgerMenu
 

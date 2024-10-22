@@ -44,32 +44,127 @@
       }
     </style>
   </head>
-  <body class="font-sans">
+  <body class="font-sans ">
+    <!-- start popublogin section -->
+    <div id="overlayregister" class="fixed inset-0 bg-black bg-opacity-50 z-20 hidden"></div>
+    <section id="popubLogin">
+      <form action=""  class="popubLogin hidden">
+        <div class="flex justify-center relative ">
+          <div
+            class="absolute z-20 flex top-[200px] justify-center py-4 px-3 bg-white"
+          >
+            <div
+              class="loginClose absolute right-4 text-3xl hover:text-red-700 hover:duration-300"
+            >
+              <button><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="left w-[48%]">
+              <h2 class="text-2xl font-bold mb-2">LOGIN</h2>
+              <p class="mb-2">Username or email address *</p>
+              <input
+                class="mb-2 border-2 w-[300px] h-[40px]"
+                type="text"
+              />
+              <p class="mb-2">Password *</p>
+              <input
+                class="border-2 mb-2 w-[300px] h-[40px] block"
+                type="password"
+     
+              />
+              <input class="border-2" type="checkbox"  />
+              <p class="inline">Remember me</p>
+              <button
+                class="block bg-[#0099CC] py-2 px-4 text-white font-bold mt-10 mb-2"
+              >
+                LOGIN
+              </button>
+              <p class="text-[#0099CC]">Lost your password?</p>
+            </div>
+            <div class="right w-[50%]">
+              <h2 class="mb-2 text-2xl font-bold">REGISTER</h2>
+              <p class="mb-2">Username *</p>
+              <input
+                class="mb-2 border-2 w-[300px] h-[40px]"
+                type="text"
+             
+              />
+              <p class="mb-2">Email *</p>
+              <input
+                class="mb-2 border-2 w-[300px] h-[40px]"
+                type="email"
+            
+              />
+              <p class="mb-2">Password *</p>
+                        <input
+                class="border-2 w-[300px] h-[40px]"
+                type="password"
+              
+              />
+              <p class="text-gray-400 py-4">
+                Your personal data will be used to support your experience
+                <br />
+                throughout this website, to manage access to your account,
+                <br />
+                and for other purposes described in our privacy policy.
+              </p>
+              <button class="bg-[#0099CC] py-2 px-4 text-white font-bold">
+                REGISTER
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    
     <!-- basket section start -->
-    <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
-    <section id="basket" class="hidden fixed left-0 right-0 top-0 bottom-0 z-50">
-      <div class="basketDiv h-screen w-[350px] px-5 bg-white absolute z-50 right-0">
-        <div class="text-right text-4xl p-2 text-gray-700 hover:text-red-700 hover:ease-in-out hover:duration-300">
+    <div
+      id="overlay"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"
+    ></div>
+    <section
+      id="basket"
+      class="basketHidden hidden fixed left-0 right-0 top-0 bottom-0 z-50"
+    >
+      <div
+        class="basketDiv h-screen w-[350px] px-5 bg-white absolute z-50 right-0"
+      >
+        <div
+          class="text-right text-4xl p-2 text-gray-700 hover:text-red-700 hover:ease-in-out hover:duration-300"
+        >
           <button class="closeBtn">
-          <i class="fa-solid fa-xmark"></i>
-         </button>
+            <i class="fa-solid fa-xmark"></i>
+          </button>
         </div>
-        <h1 class="font-extrabold text-2xl text-center border-b-2 flex justify-center pb-3">CART</h1>
+        <h1
+          class="font-extrabold text-2xl text-center border-b-2 flex justify-center pb-3"
+        >
+          CART
+        </h1>
         <div class="basket-product py-2">
-            <div class="py-3  flex items-center  justify-between px-2">
-              <img src="./assets/images/card6xperia-1-iv-dual-sim-5g-5.jpg" width="15%" >
-           <p>Lorem ipsum dolor sit amet.
-           
-           </p>
-           <button class=" border-2 rounded-full px-1 text-gray-400 hover:text-gray-700 hover:duration-500"> <i class="fa-solid fa-xmark"></i></button>          
-           </div> 
-           <div>
-            <p class="border-b-2 productPrice block text-center">caunt x aud$price</p>
-           </div>
+          <div class="py-3 flex items-center justify-between px-2">
+            <img
+              src="./assets/images/card6xperia-1-iv-dual-sim-5g-5.jpg"
+              width="15%"
+            />
+            <p>Lorem ipsum dolor sit amet.</p>
+            <button
+              class="border-2 rounded-full px-1 text-gray-400 hover:text-gray-700 hover:duration-500"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div>
+            <p class="border-b-2 productPrice block text-center">
+              caunt x aud$price
+            </p>
+          </div>
         </div>
-        <div class="subtotal block text-center text-xl py-3 border-b-2"><b> Subtotal: AUD $46</b></div>
+        <div class="subtotal block text-center text-xl py-3 border-b-2">
+          <b> Subtotal: AUD $46</b>
+        </div>
       </div>
-     </section>
+    </section>
     <!-- basket section end -->
 
     <!-- header start -->
@@ -77,7 +172,7 @@
       <div class="container mx-auto">
         <div class="header flex justify-center items-center sm:pt-2 sm:pb-2">
           <div class="header__logo basis-[25%]">
-            <button class="md:hidden sm:block text-left text-2xl pl-3">
+            <button class="burgerMenu md:hidden sm:block text-left text-2xl pl-3">
               <i class="fa-solid fa-bars text-white"></i>
             </button>
             <a href="./index.html">
@@ -95,7 +190,6 @@
             ></i>
             <input
               type="text"
-              name=""
               class="text-[14px] w-[60%] pt-3 pb-3 pl-8 rounded-[3px]"
               placeholder="Search for products..."
               id="searchInput"
@@ -116,7 +210,7 @@
             class="header__content text-[14px] gap-4 p-1 text-white font-semibold flex justify-center items-center content-center text-center basis=[25%]"
           >
             <div class="register">
-              <button><i class="fa-solid fa-user text-2xl"></i></button>
+              <button class="registerBtn"><i class="fa-solid fa-user text-2xl"></i></button>
               <button class="signIn__Btn sm:hidden md:block">
                 Sign in|Register
               </button>
@@ -133,7 +227,9 @@
               </button>
             </div>
             <div class="addToCart">
-              <button id="openBasketButton"><i class="fa-solid fa-cart-plus text-2xl"></i></button>
+              <button id="openBasketButton">
+                <i class="fa-solid fa-cart-plus text-2xl"></i>
+              </button>
               <button class="addToCart__Btn sm:hidden md:block">
                 CART/AUD <span>$0</span>
               </button>
@@ -284,11 +380,7 @@
       <div class="container text-center">
         <h1 class="text-5xl font-extrabold pb-10 pt-10">RECOMMENDED FOR YOU</h1>
         <div class="card-wrapper">
-          <div
-            id="recomendeds"
-            class="grid grid-cols-4 overflow-x-auto"
-          >
-          
+          <div id="recomendeds" class="grid grid-cols-4 overflow-x-auto">
             <!-- <div class="card">
                 <div class="card-img w-[200px] h-[200px]">
                   <img
