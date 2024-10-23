@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .dropDownHover a {
+    @apply hover:underline hover:bg-white hover:text-[#0099CC] pl-3;
+  }
+  .iconColor i {
+    @apply text-black;
+  }
+  .footer-title h1 {
+    @apply font-semibold text-xl pb-5 pt-5;
+  }
+  .footer-title a {
+    @apply pb-10;
+  }
+  .card button {
+    @apply hover:bg-[#0099CC] hover:text-white hover:duration-500 hover:ease-in-out;
+  }
+  .brands-content img {
+    @apply w-full;
+  }
+  #popubLogin p {
+    @apply font-semibold;
+  }
+}
