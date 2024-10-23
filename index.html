@@ -44,12 +44,15 @@
       }
     </style>
   </head>
-  <body class="font-sans ">
+  <body class="font-sans">
     <!-- start popublogin section -->
-    <div id="overlayregister" class="fixed inset-0 bg-black bg-opacity-50 z-20 hidden"></div>
+    <div
+      id="overlayregister"
+      class="fixed inset-0 bg-black bg-opacity-50 z-20 hidden"
+    ></div>
     <section id="popubLogin">
-      <form action=""  class="popubLogin hidden">
-        <div class="flex justify-center relative ">
+      <form action="" class="popubLogin hidden">
+        <div class="flex justify-center relative">
           <div
             class="absolute z-20 flex top-[200px] justify-center py-4 px-3 bg-white"
           >
@@ -61,17 +64,13 @@
             <div class="left w-[48%]">
               <h2 class="text-2xl font-bold mb-2">LOGIN</h2>
               <p class="mb-2">Username or email address *</p>
-              <input
-                class="mb-2 border-2 w-[300px] h-[40px]"
-                type="text"
-              />
+              <input class="mb-2 border-2 w-[300px] h-[40px]" type="text" />
               <p class="mb-2">Password *</p>
               <input
                 class="border-2 mb-2 w-[300px] h-[40px] block"
                 type="password"
-     
               />
-              <input class="border-2" type="checkbox"  />
+              <input class="border-2" type="checkbox" />
               <p class="inline">Remember me</p>
               <button
                 class="block bg-[#0099CC] py-2 px-4 text-white font-bold mt-10 mb-2"
@@ -83,23 +82,11 @@
             <div class="right w-[50%]">
               <h2 class="mb-2 text-2xl font-bold">REGISTER</h2>
               <p class="mb-2">Username *</p>
-              <input
-                class="mb-2 border-2 w-[300px] h-[40px]"
-                type="text"
-             
-              />
+              <input class="mb-2 border-2 w-[300px] h-[40px]" type="text" />
               <p class="mb-2">Email *</p>
-              <input
-                class="mb-2 border-2 w-[300px] h-[40px]"
-                type="email"
-            
-              />
+              <input class="mb-2 border-2 w-[300px] h-[40px]" type="email" />
               <p class="mb-2">Password *</p>
-                        <input
-                class="border-2 w-[300px] h-[40px]"
-                type="password"
-              
-              />
+              <input class="border-2 w-[300px] h-[40px]" type="password" />
               <p class="text-gray-400 py-4">
                 Your personal data will be used to support your experience
                 <br />
@@ -115,30 +102,49 @@
         </div>
       </form>
     </section>
-     <section id="responsivBurger" class="hidden">
-      <div class="flex py-7 justify-center text-center flex-col absolute bg-white z-50 h-screen">
-        <div class="font-sans py-4 px-6 font-semibold border-b-2 text-gray-500 "><a href="./index.html" >SHOP PRODUCTS</a></div>
-        <div class="font-sans py-4 px-6 font-semibold border-b-2 text-gray-500"><a href="./clearance.html">CLEARANCE</a></div>
-        <div class="font-sans py-4 px-6 font-semibold border-b-2 text-gray-500"><a href="./brands.html">BRANDS</a></div>
-        <div class="font-sans py-4 px-6 font-semibold border-b-2 text-gray-500"><a href="./delivery.html">DELIVERY</a></div>
-        <div class="font-sans py-4 px-6 font-semibold border-b-2 text-gray-500"><a href="./faqs.html">FAQS</a></div>
-        <div class="font-sans py-4 px-6 font-semibold text-gray-500"><a href="./help.html">HELP</a></div>
+    <section id="responsivBurger" class="hidden">
+      <div
+        class="flex py-7 justify-center text-center flex-col absolute bg-white z-50 h-screen"
+      >
+        <div class="font-sans py-4 px-6 font-semibold border-b-2 text-gray-500">
+          <a href="./index.html">SHOP PRODUCTS</a>
+        </div>
+        <div class="font-sans py-4 px-6 font-semibold border-b-2 text-gray-500">
+          <a href="./clearance.html">CLEARANCE</a>
+        </div>
+        <div class="font-sans py-4 px-6 font-semibold border-b-2 text-gray-500">
+          <a href="./brands.html">BRANDS</a>
+        </div>
+        <div class="font-sans py-4 px-6 font-semibold border-b-2 text-gray-500">
+          <a href="./delivery.html">DELIVERY</a>
+        </div>
+        <div class="font-sans py-4 px-6 font-semibold border-b-2 text-gray-500">
+          <a href="./faqs.html">FAQS</a>
+        </div>
+        <div class="font-sans py-4 px-6 font-semibold text-gray-500">
+          <a href="./help.html">HELP</a>
+        </div>
 
-        <button class="burgerClose content-center text-lg py-1 text-white font-semibold bg-red-600 ">Close</button>
+        <button
+          class="burgerClose content-center text-lg py-1 text-white font-semibold bg-red-600"
+        >
+          Close
+        </button>
       </div>
-     </section>
+    </section>
 
     <!-- basket section start -->
     <div
       id="overlay"
       class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"
     ></div>
+
     <section
       id="basket"
-      class="basketHidden hidden fixed left-0 right-0 top-0 bottom-0 z-50"
+      class="basketHidden overflow-y-auto hidden fixed left-0 right-0 top-0 bottom-0 z-50"
     >
       <div
-        class="basketDiv h-screen w-[350px] px-5 bg-white absolute z-50 right-0"
+        class="basketDiv h-screen transition-all duration-300 overflow-auto w-[350px] px-5 bg-white absolute z-50 right-0"
       >
         <div
           class="text-right text-4xl p-2 text-gray-700 hover:text-red-700 hover:ease-in-out hover:duration-300"
@@ -152,28 +158,7 @@
         >
           CART
         </h1>
-        <div class="basket-product py-2">
-          <div class="py-3 flex items-center justify-between px-2">
-            <img
-              src="./assets/images/card6xperia-1-iv-dual-sim-5g-5.jpg"
-              width="15%"
-            />
-            <p>Lorem ipsum dolor sit amet.</p>
-            <button
-              class="border-2 rounded-full px-1 text-gray-400 hover:text-gray-700 hover:duration-500"
-            >
-              <i class="fa-solid fa-xmark"></i>
-            </button>
-          </div>
-          <div>
-            <p class="border-b-2 productPrice block text-center">
-              caunt x aud$price
-            </p>
-          </div>
-        </div>
-        <div class="subtotal block text-center text-xl py-3 border-b-2">
-          <b> Subtotal: AUD $46</b>
-        </div>
+        <div class="basket-product py-2"></div>
       </div>
     </section>
     <!-- basket section end -->
@@ -183,7 +168,9 @@
       <div class="container mx-auto">
         <div class="header flex justify-center items-center sm:pt-2 sm:pb-2">
           <div class="header__logo basis-[25%]">
-            <button class="burgerMenu md:hidden sm:block text-left text-2xl pl-3">
+            <button
+              class="burgerMenu md:hidden sm:block text-left text-2xl pl-3"
+            >
               <i class="fa-solid fa-bars text-white"></i>
             </button>
             <a href="./index.html">
@@ -221,7 +208,9 @@
             class="header__content text-[14px] gap-4 p-1 text-white font-semibold flex justify-center items-center content-center text-center basis=[25%]"
           >
             <div class="register">
-              <button class="registerBtn"><i class="fa-solid fa-user text-2xl"></i></button>
+              <button class="registerBtn">
+                <i class="fa-solid fa-user text-2xl"></i>
+              </button>
               <button class="signIn__Btn sm:hidden md:block">
                 Sign in|Register
               </button>
