@@ -328,4 +328,5 @@ let openBasketButton=document.querySelector("#openBasketButton")
   const basketSection = document.querySelector("#basket");
   basketSection.classList.remove("hidden")
   closeBasket()
+  showBasket()
  })
