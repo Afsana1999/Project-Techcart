@@ -264,9 +264,7 @@ let popubLogin = document.querySelector(".popubLogin");
 let overlayregister = document.getElementById("overlayregister");
 
 registerBtn.addEventListener("click", () => {
-  overlayregister.classList.remove("hidden");
   popubLogin.classList.remove("hidden");
-  document.body.classList.add("overflow-hidden");
 });
 
 //burgerMenu

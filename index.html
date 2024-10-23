@@ -46,10 +46,6 @@
   </head>
   <body class="font-sans">
     <!-- start popublogin section -->
-    <div
-      id="overlayregister"
-      class="fixed inset-0 bg-black bg-opacity-50 z-20 hidden"
-    ></div>
     <section id="popubLogin">
       <form action="" class="popubLogin hidden">
         <div class="flex justify-center relative">
@@ -102,6 +98,8 @@
         </div>
       </form>
     </section>
+
+    <!--responsivburger -->
     <section id="responsivBurger" class="hidden">
       <div
         class="flex py-7 justify-center text-center flex-col absolute bg-white z-50 h-screen"
@@ -138,7 +136,6 @@
       id="overlay"
       class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"
     ></div>
-
     <section
       id="basket"
       class="basketHidden overflow-y-auto hidden fixed left-0 right-0 top-0 bottom-0 z-50"
@@ -216,15 +213,17 @@
               </button>
             </div>
             <div class="shopList">
-              <button class="md:inline sm:hidden">
-                <i class="fa-regular fa-rectangle-list text-2xl"></i>
-              </button>
-              <button class="shopList__Btn sm:hidden md:block">
-                Shopping list
-              </button>
-              <button class="md:hidden sm:block">
-                <i class="fa-solid fa-star text-2xl"></i>
-              </button>
+              <a href="./shoplist.html">
+                <button class="md:inline sm:hidden">
+                  <i class="fa-regular fa-rectangle-list text-2xl"></i>
+                </button>
+                <button class="shopList__Btn sm:hidden md:block">
+                  Shopping list
+                </button>
+                <button class="md:hidden sm:block">
+                  <i class="fa-solid fa-star text-2xl"></i>
+                </button>
+              </a>
             </div>
             <div class="addToCart">
               <button id="openBasketButton">
@@ -1411,6 +1410,7 @@
       </div>
     </footer>
     <!-- footer end -->
+    <div id="overlayregister" class="fixed inset-0 bg-black bg-opacity-50 z-20 hidden"></div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   </body>
 </html>
