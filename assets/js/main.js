@@ -323,4 +323,9 @@ function updateSubtotal() {
 
 
 //openbasketIcon
-
+let openBasketButton=document.querySelector("#openBasketButton")
+ openBasketButton.addEventListener("click",()=>{
+  const basketSection = document.querySelector("#basket");
+  basketSection.classList.remove("hidden")
+  closeBasket()
+ })
